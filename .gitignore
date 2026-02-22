@@ -1,0 +1,12 @@
+dist
+build
+.idea
+__pycache__/
+*.pyc
+*.pkl
+*.gz
+*.db
+*.db-shm
+*.db-wal
+output/data/
+output/log/

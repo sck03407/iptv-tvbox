@@ -1,0 +1,20 @@
+services:
+  iptv-tvbox:
+    image: ghcr.io/<你的GitHub用户名>/iptv-tvbox:latest
+    container_name: iptv-tvbox
+    restart: unless-stopped
+
+    ports:
+      - "51888:51888"
+
+    volumes:
+      - ./config:/iptv-api/config
+      - ./output:/iptv-api/output
+
+    environment:
+      PUBLIC_SCHEME: "http"
+      PUBLIC_DOMAIN: "127.0.0.1"
+      PUBLIC_PORT: "51888"
+      NGINX_HTTP_PORT: "51888"
+      CDN_URL: ""
+      HTTP_PROXY: ""
