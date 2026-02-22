@@ -64,6 +64,25 @@ jobs:
       - name: Install selenium
         if: env.OPEN_DRIVER == 'True'
         run: pipenv install selenium
+      - name: Sync alias list
+        run: |
+          ALIAS_URL="https://raw.githubusercontent.com/Guovin/iptv-api/master/config/alias.txt"
+          TMP_FILE="$(mktemp)"
+          if curl -fsSL "$ALIAS_URL" -o "$TMP_FILE"; then
+            if [ -s "$TMP_FILE" ]; then
+              if ! cmp -s "$TMP_FILE" "config/alias.txt"; then
+                mv "$TMP_FILE" "config/alias.txt"
+              else
+                rm "$TMP_FILE"
+              fi
+            else
+              echo "Downloaded alias.txt is empty, skip"
+              rm -f "$TMP_FILE"
+            fi
+          else
+            echo "Failed to download alias.txt, skip"
+            rm -f "$TMP_FILE"
+          fi
       - name: Update
         run: pipenv run dev
       - name: Upload output artifacts
@@ -81,7 +100,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add output/** version.json || true
+          git add output/** version.json config/alias.txt || true
           if ! git diff --staged --quiet; then
             git commit -m "Github Action Auto Updated"
             git push
