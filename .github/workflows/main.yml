@@ -5,9 +5,7 @@ on:
     - cron: '0 10 */2 * *'
   workflow_dispatch:
     branches:
-      - master
-      - dev
-      - gd
+      - main
 
 permissions:
   contents: write
