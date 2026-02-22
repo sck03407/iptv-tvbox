@@ -16,5 +16,6 @@ https://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interfac
 https://raw.githubusercontent.com/mytv-android/myMIGU/main/interface.txt
 
 # mytv-android Sources (Added from mytv-android organization)
-https://raw.githubusercontent.com/mytv-android/China-TV-Live-M3U8/main/iptv.m3u
-https://raw.githubusercontent.com/mytv-android/BRTV-Live-M3U8/main/iptv.m3u
+https://raw.githubusercontent.com/mytv-android/BRTV-Live-M3U8/refs/heads/main/BRTV.m3u
+https://raw.githubusercontent.com/mytv-android/China-TV-Live-M3U8/refs/heads/main/tv.m3u
+https://gitee.com/mytv-android/mytvJS/raw/main/js.gitee.m3u
