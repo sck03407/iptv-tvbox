@@ -32,6 +32,7 @@ jobs:
           
           from pathlib import Path
           from urllib.error import HTTPError, URLError
+          from urllib.parse import urlsplit, urlunsplit, quote
           from urllib.request import Request, urlopen
           
           path = Path("config/subscribe.txt")
@@ -44,8 +45,16 @@ jobs:
               "Connection": "close",
           }
           
+          def normalize_url(url: str) -> str:
+              parts = urlsplit(url)
+              path = quote(parts.path, safe="/%")
+              query = quote(parts.query, safe="=&%")
+              fragment = quote(parts.fragment, safe="%")
+              return urlunsplit((parts.scheme, parts.netloc, path, query, fragment))
+          
           def try_request(url: str, method: str):
-              req = Request(url, method=method, headers=headers)
+              safe_url = normalize_url(url)
+              req = Request(safe_url, method=method, headers=headers)
               with urlopen(req, timeout=15) as resp:
                   status = resp.getcode() or 0
                   data = b""
