@@ -80,22 +80,12 @@ jobs:
             -v ${{ github.workspace }}/output:/data \
             lscr.io/linuxserver/webgrabplus:latest \
             /bin/bash -c "set -e; \
-              echo 'diag: check ping binary location'; which ping || true; \
-              echo 'diag: setup ping mocks (backup)'; \
-              printf '#!/bin/sh\necho \"[mock] ping called with args: \$*\" >> /data/ping_mock.log\nexit 0\n' > /tmp/ping; \
-              printf '#!/bin/sh\necho \"[mock] ping6 called with args: \$*\" >> /data/ping_mock.log\nexit 0\n' > /tmp/ping6; \
-              chmod +x /tmp/ping /tmp/ping6; \
-              export PATH=/tmp:$PATH; \
-              cp /tmp/ping /bin/ping; \
-              cp /tmp/ping6 /bin/ping6; \
-              if [ -f /usr/bin/ping ]; then cp /tmp/ping /usr/bin/ping; fi; \
-              if [ -f /usr/bin/ping6 ]; then cp /tmp/ping6 /usr/bin/ping6; fi; \
-              echo 'diag: spoofing connectivity check targets to localhost'; \
-              ip addr add 8.8.8.8/32 dev lo || echo 'Failed to add 8.8.8.8 to lo'; \
-              ip addr add 8.8.4.4/32 dev lo || echo 'Failed to add 8.8.4.4 to lo'; \
-              ip addr add 1.1.1.1/32 dev lo || echo 'Failed to add 1.1.1.1 to lo'; \
-              echo '127.0.0.1 www.google.com google.com' >> /etc/hosts; \
-              echo 'diag: testing connectivity to 8.8.8.8 (should be local)'; ping -c 1 8.8.8.8 || true; \
+              echo 'diag: installing iptables for network spoofing'; \
+              apt-get update && apt-get install -y iptables || echo 'Failed to install iptables'; \
+              echo 'diag: applying iptables NAT rule to redirect all ICMP ping to localhost'; \
+              iptables -t nat -A OUTPUT -p icmp --icmp-type echo-request -j DNAT --to-destination 127.0.0.1 || echo 'Failed to apply iptables rule'; \
+              echo 'diag: verifying ping spoof (should succeed locally)'; ping -c 1 webgrabplus.com || echo 'Ping still failed'; \
+              echo 'diag: verifying http access (should succeed remotely)'; curl -I -m 5 https://webgrabplus.com || echo 'HTTP failed'; \
               echo 'diag: running webgrabplus...'; \
               if [ -x /app/dotnet/dotnet ] && [ -f /app/wg++/bin.net/WebGrab+Plus.dll ]; then \
                 /app/dotnet/dotnet /app/wg++/bin.net/WebGrab+Plus.dll /config; \
@@ -103,9 +93,7 @@ jobs:
                 dotnet /app/wg++/bin.net/WebGrab+Plus.dll /config; \
               else \
                 echo \"WebGrab+Plus executable not found\"; ls -la /app /app/wg++ /app/wg++/bin.net || true; exit 1; \
-              fi; \
-              echo 'diag: checking ping log'; \
-              if [ -f /data/ping_mock.log ]; then cat /data/ping_mock.log; else echo 'No ping log found (ping not called via shell)'; fi"
+              fi"
           if [ ! -f output/epg/custom_epg.xml ]; then
             echo "custom_epg.xml not generated"
             if [ -f config/webgrabplus/WebGrab++.log.txt ]; then
