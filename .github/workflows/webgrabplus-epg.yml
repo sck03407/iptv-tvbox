@@ -69,7 +69,6 @@ jobs:
           
           docker run --rm \
             --hostname webgrabplus \
-            --mac-address=00:00:00:00:00:00 \
             -e PUID=1000 \
             -e PGID=1000 \
             -e TZ=Asia/Shanghai \
