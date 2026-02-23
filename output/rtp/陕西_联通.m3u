@@ -1,0 +1,186 @@
+#EXTM3U
+#Created by GitHub Actions: 2026-02-23 14:42:30 UTC
+#Source: 陕西_联通
+
+#EXTINF:-1 tvg-name="CCTV-1" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV1.png" group-title="📺央视频道",CCTV-1
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3531357C317C383030307CE4B8ADE5A4AEE4B880E5A5977C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="CCTV-1" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV1.png" group-title="📺央视频道",CCTV-1 HD
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030347C3634387C317C383030307CE4B89CE696B9E58DABE8A786E9AB98E6B885E6B58BE8AF957C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="CCTV-1" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV1.png" group-title="📺央视频道",CCTV-1测试
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3733327C317C383030307C43435456312D746573747C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="CCTV-2" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV2.png" group-title="📺央视频道",CCTV-2
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3531367C317C383030307CE4B8ADE5A4AEE4BA8CE5A5977C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="CCTV-3" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV3.png" group-title="📺央视频道",CCTV-3
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303031367C3130303336307C7C7C7C687474707C74735B2F63686E5D5B74735D305B2F74735D5B7375735D315B2F7375735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="CCTV-4" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV4.png" group-title="📺央视频道",CCTV-4
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030347C3135327C317C383030307C63637476347C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="CCTV-5" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV5.png" group-title="📺央视频道",CCTV-5
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303031367C3130303336317C7C7C7C687474707C74735B2F63686E5D5B74735D305B2F74735D5B7375735D315B2F7375735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="CCTV-6" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV6.png" group-title="📺央视频道",CCTV-6
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303031367C3130303336327C7C7C7C687474707C74735B2F63686E5D5B74735D305B2F74735D5B7375735D315B2F7375735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="CCTV-7" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV7.png" group-title="📺央视频道",CCTV-7
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030347C3135367C317C383030307C63637476377C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="CCTV-8" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV8.png" group-title="📺央视频道",CCTV-8
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303031367C3130303336337C7C7C7C687474707C74735B2F63686E5D5B74735D305B2F74735D5B7375735D315B2F7375735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="CCTV-9" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV9.png" group-title="📺央视频道",CCTV-9
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3532317C317C383030307CE4B8ADE5A4AEE4B99DE5A5977C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="CCTV-10" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV10.png" group-title="📺央视频道",CCTV-10
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3532327C317C383030307CE4B8ADE5A4AEE58D81E5A5977C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="CCTV-11" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV11.png" group-title="📺央视频道",CCTV-11
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030347C3138387C317C383030307C4343545631317C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="CCTV-12" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV12.png" group-title="📺央视频道",CCTV-12
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030347C3138397C317C383030307C4343545631327C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="CCTV-13" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV13.png" group-title="📺央视频道",CCTV-13
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3532337C317C383030307CE4B8ADE5A4AEE58D81E4B889E5A5977C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="CCTV-13" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV13.png" group-title="📺央视频道",CCTV-13测试
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030347C3638397C317C383030307C434354563133324B7C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="CCTV-13" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV13.png" group-title="📺央视频道",CCTV-13测试2
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303031367C3130303234377C7C7C7C687474707C74735B2F63686E5D5B74735D305B2F74735D5B7375735D315B2F7375735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="CCTV-14" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV14.png" group-title="📺央视频道",CCTV-14
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030347C3139327C317C383030307C6363747673657C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="CCTV-15" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV15.png" group-title="📺央视频道",CCTV-15
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030347C3139337C317C383030307C6363747679797C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="CCTV-17" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV17.png" group-title="📺央视频道",CCTV-17
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303031367C3130303335387C7C7C7C687474707C74735B2F63686E5D5B74735D305B2F74735D5B7375735D315B2F7375735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="CCTV-17" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/CCTV17.png" group-title="📺央视频道",CCTV-17 HD
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303031367C3130303335397C7C7C7C687474707C74735B2F63686E5D5B74735D305B2F74735D5B7375735D315B2F7375735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="东南卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/东南卫视.png" group-title="📺卫视频道",东南卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3132337C317C383030307C646E77737C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="东方卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/东方卫视.png" group-title="📺卫视频道",东方卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3534317C317C383030307CE4B89CE696B9E58DABE8A7867C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="云南卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/云南卫视.png" group-title="📺卫视频道",云南卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3131397C317C383030307C796E77737C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="兵团卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/兵团卫视.png" group-title="📺卫视频道",兵团卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3137347C317C383030307CE585B5E59BA2E58DABE8A786207C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="内蒙古卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/内蒙古卫视.png" group-title="📺卫视频道",内蒙古卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3131327C317C383030307C6E6D6777737C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="农林卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/农林卫视.png" group-title="📺卫视频道",农林卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303031367C3130303236397C7C7C7C687474707C74735B2F63686E5D5B74735D305B2F74735D5B7375735D315B2F7375735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="北京卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/北京卫视.png" group-title="📺卫视频道",北京卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030347C3230307C317C383030307CE58C97E4BAACE58DABE8A7867C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="吉林卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/吉林卫视.png" group-title="📺卫视频道",吉林卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3133307C317C383030307C6A6C77737C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="四川卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/四川卫视.png" group-title="📺卫视频道",四川卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3131387C317C383030307C736377737C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="天津卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/天津卫视.png" group-title="📺卫视频道",天津卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3132387C317C383030307C746A77737C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="宁夏卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/宁夏卫视.png" group-title="📺卫视频道",宁夏卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3131317C317C383030307C6E7877737C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="安徽卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/安徽卫视.png" group-title="📺卫视频道",安徽卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030347C3139397C317C383030307CE5AE89E5BEBDE58DABE8A7867C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="山东卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/山东卫视.png" group-title="📺卫视频道",山东卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3133337C317C383030307C736477737C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="山西卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/山西卫视.png" group-title="📺卫视频道",山西卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3131337C317C383030307C73616E7877737C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="广东卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/广东卫视.png" group-title="📺卫视频道",广东卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3132377C317C383030307C676477737C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="广西卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/广西卫视.png" group-title="📺卫视频道",广西卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3132307C317C383030307C677877737C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="新疆卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/新疆卫视.png" group-title="📺卫视频道",新疆卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030347C3534307C317C383030307CE696B0E79686E58DABE8A7867C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="江苏卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/江苏卫视.png" group-title="📺卫视频道",江苏卫视
+5B63686E5D575330303030303030347C3139387C317C383030307CE6B19FE88B8FE58DABE8A7867C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="江西卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/江西卫视.png" group-title="📺卫视频道",江西卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3131347C317C383030307C6A7877737C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="河北卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/河北卫视.png" group-title="📺卫视频道",河北卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3131357C317C383030307C68656277737C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="河南卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/河南卫视.png" group-title="📺卫视频道",河南卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3132327C317C383030307C68656E77737C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="浙江卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/浙江卫视.png" group-title="📺卫视频道",浙江卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3532347C317C383030307CE6B599E6B19FE58DABE8A7867C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="海南卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/海南卫视.png" group-title="📺卫视频道",海南卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030347C3230327C317C383030307CE69785E6B8B8E58DABE8A7867C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="深圳卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/深圳卫视.png" group-title="📺卫视频道",深圳卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030347C3230317C317C383030307CE6B7B1E59CB3E58DABE8A7867C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="湖北卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/湖北卫视.png" group-title="📺卫视频道",湖北卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3131377C317C383030307C68756277737C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="湖南卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/湖南卫视.png" group-title="📺卫视频道",湖南卫视
+5B63686E5D575330303030303030337C3636307C317C383030307CE6B996E58D97E58DABE8A7867C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="甘肃卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/甘肃卫视.png" group-title="📺卫视频道",甘肃卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3130377C317C383030307C677377737C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="西藏卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/西藏卫视.png" group-title="📺卫视频道",西藏卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030347C3533397C317C383030307CE8A5BFE8978FE58DABE8A7867C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="贵州卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/贵州卫视.png" group-title="📺卫视频道",贵州卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3133317C317C383030307C677A77737C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="辽宁卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/辽宁卫视.png" group-title="📺卫视频道",辽宁卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3132397C317C383030307C6C6E77737C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="重庆卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/重庆卫视.png" group-title="📺卫视频道",重庆卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3133347C317C383030307C637177737C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="陕西卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/陕西卫视.png" group-title="📺卫视频道",陕西卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3532367C317C383030307CE99995E8A5BFE58DABE8A7867C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="青海卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/青海卫视.png" group-title="📺卫视频道",青海卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030347C3533387C317C383030307CE99D92E6B5B7E58DABE8A7867C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="黑龙江卫视" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/黑龙江卫视.png" group-title="📺卫视频道",黑龙江卫视
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3132347C317C383030307C686C6A77737C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="北京卫视高清" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/北京.png" group-title="📺地方频道",北京卫视高清
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030347C3732347C317C383030307C626A777368647C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="安徽卫视高清" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/安徽.png" group-title="📺地方频道",安徽卫视高清
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030347C3732397C317C383030307C6168777368647C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="山东卫视高清" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/山东.png" group-title="📺地方频道",山东卫视高清
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030347C3732367C317C383030307C7364777368647C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="广东卫视高清" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/广东.png" group-title="📺地方频道",广东卫视高清
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3732327C317C383030307C6764777368647C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="江苏卫视测试" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/江苏.png" group-title="📺地方频道",江苏卫视测试
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303031367C3130303235307C7C7C7C687474707C74735B2F63686E5D5B74735D305B2F74735D5B7375735D315B2F7375735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="江苏卫视高清" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/江苏.png" group-title="📺地方频道",江苏卫视高清
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3731387C317C383030307C6A73777368647C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="江西卫视测试" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/江西.png" group-title="📺地方频道",江西卫视测试
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3733317C317C383030307C4A5857532D746573747C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="浙江卫视高清" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/浙江.png" group-title="📺地方频道",浙江卫视高清
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030347C3639317C317C383030307C5A4A57534844323530307C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="湖北卫视高清" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/湖北.png" group-title="📺地方频道",湖北卫视高清
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030347C3732377C317C383030307C687562777368647C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="湖南卫视高清" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/湖南.png" group-title="📺地方频道",湖南卫视高清
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3731397C317C383030307C686E777368647C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="陕西1套" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/陕西1套.png" group-title="📺地方频道",陕西1套
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303031367C3130303235357C7C7C7C687474707C74735B2F63686E5D5B74735D305B2F74735D5B7375735D315B2F7375735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="陕西2套" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/陕西2套.png" group-title="📺地方频道",陕西2套
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303031367C3130303236327C7C7C7C687474707C74735B2F63686E5D5B74735D305B2F74735D5B7375735D315B2F7375735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="陕西3套" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/陕西3套.png" group-title="📺地方频道",陕西3套
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303031367C3130303236337C7C7C7C687474707C74735B2F63686E5D5B74735D305B2F74735D5B7375735D315B2F7375735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="陕西4套" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/陕西4套.png" group-title="📺地方频道",陕西4套
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303031367C3130303236347C7C7C7C687474707C74735B2F63686E5D5B74735D305B2F74735D5B7375735D315B2F7375735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="陕西5套" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/陕西5套.png" group-title="📺地方频道",陕西5套
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303031367C3130303236357C7C7C7C687474707C74735B2F63686E5D5B74735D305B2F74735D5B7375735D315B2F7375735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="陕西6套" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/陕西6套.png" group-title="📺地方频道",陕西6套
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303031367C3130303236367C7C7C7C687474707C74735B2F63686E5D5B74735D305B2F74735D5B7375735D315B2F7375735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="陕西7套" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/陕西7套.png" group-title="📺地方频道",陕西7套
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303031367C3130303236377C7C7C7C687474707C74735B2F63686E5D5B74735D305B2F74735D5B7375735D315B2F7375735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="陕西8套" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/陕西8套.png" group-title="📺地方频道",陕西8套
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303031367C3130303236387C7C7C7C687474707C74735B2F63686E5D5B74735D305B2F74735D5B7375735D315B2F7375735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="优漫卡通" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/优漫卡通.png" group-title="📺专题频道",优漫卡通
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030347C3533347C317C383030307CE4BC98E6BCABE58DA1E9809A7C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="卡酷动画" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/少儿.png" group-title="📺专题频道",卡酷动画
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030347C3533357C317C383030307CE58DA1E985B7E58AA8E794BB7C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="嘉佳卡通" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/嘉佳卡通.png" group-title="📺专题频道",嘉佳卡通
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030347C3533327C317C383030307CE59889E4BDB3E58DA1E9809A7C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="少儿动漫" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/少儿.png" group-title="📺专题频道",少儿动漫
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030347C3138347C317C383030307CE5B091E584BFE58AA8E6BCAB7C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="炫酷卡通" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/炫酷卡通.png" group-title="📺专题频道",炫酷卡通
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030347C3533337C317C383030307CE782ABE985B7E58DA1E9809A7C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="金鹰卡通" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/金鹰卡通.png" group-title="📺专题频道",金鹰卡通
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030347C3533367C317C383030307CE98791E9B9B0E58DA1E9809A7C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="CGTN" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/CGTN.png" group-title="📺其他频道",CGTN
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030347C3139307C317C383030307C434354562D6E6577737C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="东方卫视测试" tvg-logo="" group-title="📺其他频道",东方卫视测试
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303031367C3130303234397C7C7C7C687474707C74735B2F63686E5D5B74735D305B2F74735D5B7375735D315B2F7375735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="东方卫视测试2" tvg-logo="" group-title="📺其他频道",东方卫视测试2
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303031367C3130303235317C7C7C7C687474707C74735B2F63686E5D5B74735D305B2F74735D5B7375735D315B2F7375735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="东方卫视高清" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/东方卫视.png" group-title="📺其他频道",东方卫视高清
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030347C3732357C317C383030307C6466777368647C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="中国教育电视台" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/中国教育电视台.png" group-title="📺其他频道",中国教育电视台
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030347C3230337C317C383030307CE4B8ADE59BBDE69599E882B2E794B5E8A786E58FB07C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="天津卫视高清" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/天津卫视.png" group-title="📺其他频道",天津卫视高清
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303030337C3732337C317C383030307C746A777368647C687474707C74735B2F63686E5D5B74735D307C687474705B2F74735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="晴彩三秦" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/晴彩三秦.png" group-title="📺其他频道",晴彩三秦
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303031367C3130303237307C7C7C7C687474707C74735B2F63686E5D5B74735D305B2F74735D5B7375735D315B2F7375735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="融媒直播" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/融媒直播.png" group-title="📺其他频道",融媒直播
+http://l2.j9zh3.10.vs.shanxiunicom.livestr2.wasu.tv/live/rmt.m3u8
+#EXTINF:-1 tvg-name="西安教育台" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/西安教育台.png" group-title="📺其他频道",西安教育台
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303031367C3130303037317C7C7C7C687474707C74735B2F63686E5D5B74735D315B2F74735D5B7375735D315B2F7375735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="西教一台" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/西教一台.png" group-title="📺其他频道",西教一台
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303031367C3130303330397C7C7C7C687474707C74735B2F63686E5D5B74735D305B2F74735D5B7375735D315B2F7375735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="西教三台" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/西教三台.png" group-title="📺其他频道",西教三台
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303031367C3130303331317C7C7C7C687474707C74735B2F63686E5D5B74735D305B2F74735D5B7375735D315B2F7375735DVSDNSOOONERCOM00
+#EXTINF:-1 tvg-name="西教二台" tvg-logo="https://raw.githubusercontent.com/fanmingming/live/main/tv/西教二台.png" group-title="📺其他频道",西教二台
+http://shanxiunicom.livestr.wasu.tv/5B63686E5D575330303030303031367C3130303331307C7C7C7C687474707C74735B2F63686E5D5B74735D305B2F74735D5B7375735D315B2F7375735DVSDNSOOONERCOM00
