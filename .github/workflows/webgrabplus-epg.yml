@@ -18,7 +18,8 @@ jobs:
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
-      
+      - name: Sync with remote
+        run: git pull --rebase
       - name: Checkout SiteIni Pack (Upstream)
         uses: actions/checkout@v4
         with:
@@ -84,7 +85,6 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git config --global advice.addIgnoredFile false
-          git pull --rebase
           # Add the synced siteini pack files to git
           git add config/webgrabplus/siteini.pack/China/*
           git add output/epg/custom_epg.xml || true
