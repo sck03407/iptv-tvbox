@@ -1,0 +1,57 @@
+name: 'Sync alias list'
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to sync'
+        required: true
+        default: 'main'
+      alias_url:
+        description: 'Alias source URL'
+        required: true
+        default: 'https://raw.githubusercontent.com/Guovin/iptv-api/master/config/alias.txt'
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set branch name
+        id: vars
+        run: echo "BRANCH_NAME=${{ inputs.branch }}" >> $GITHUB_ENV
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BRANCH_NAME }}
+          fetch-depth: 0
+      - name: Sync alias list
+        run: |
+          ALIAS_URL="${{ inputs.alias_url }}"
+          TMP_FILE="$(mktemp)"
+          if curl -fsSL "$ALIAS_URL" -o "$TMP_FILE"; then
+            if [ -s "$TMP_FILE" ]; then
+              if ! cmp -s "$TMP_FILE" "config/alias.txt"; then
+                mv "$TMP_FILE" "config/alias.txt"
+              else
+                rm "$TMP_FILE"
+              fi
+            else
+              echo "Downloaded alias.txt is empty, skip"
+              rm -f "$TMP_FILE"
+            fi
+          else
+            echo "Failed to download alias.txt, skip"
+            rm -f "$TMP_FILE"
+          fi
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add config/alias.txt || true
+          if ! git diff --staged --quiet; then
+            git commit -m "Sync alias.txt"
+            git push
+          fi

@@ -1,0 +1,132 @@
+name: 'Check subscribe urls'
+
+on:
+  workflow_dispatch:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set branch name
+        id: vars
+        run: echo "BRANCH_NAME=${{ github.ref_name }}" >> $GITHUB_ENV
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BRANCH_NAME }}
+          fetch-depth: 0
+      - name: Run with setup-python 3.13
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          update-environment: true
+      - name: Validate subscribe urls
+        run: |
+          python - <<'PY'
+          from __future__ import annotations
+          
+          from pathlib import Path
+          from urllib.error import HTTPError, URLError
+          from urllib.request import Request, urlopen
+          
+          path = Path("config/subscribe.txt")
+          original = path.read_text(encoding="utf-8")
+          lines = original.splitlines()
+          
+          headers = {
+              "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+              "Accept": "*/*",
+              "Connection": "close",
+          }
+          
+          def try_request(url: str, method: str):
+              req = Request(url, method=method, headers=headers)
+              with urlopen(req, timeout=15) as resp:
+                  status = resp.getcode() or 0
+                  data = b""
+                  if method != "HEAD":
+                      data = resp.read(2048)
+                  return status, data
+          
+          def classify_status(status: int) -> str:
+              if 200 <= status < 400:
+                  return "valid"
+              if status in (404, 410):
+                  return "invalid"
+              return "unknown"
+          
+          def probe_once(url: str) -> str:
+              try:
+                  status, _ = try_request(url, "HEAD")
+                  head_result = classify_status(status)
+                  if head_result != "unknown":
+                      return head_result
+              except HTTPError as e:
+                  if e.code in (404, 410):
+                      return "invalid"
+              except (URLError, TimeoutError):
+                  return "unknown"
+          
+              try:
+                  status, data = try_request(url, "GET")
+                  get_result = classify_status(status)
+                  if get_result == "valid":
+                      return "valid" if data.strip() else "invalid"
+                  return get_result
+              except HTTPError as e:
+                  return "invalid" if e.code in (404, 410) else "unknown"
+              except (URLError, TimeoutError):
+                  return "unknown"
+          
+          def is_valid(url: str, attempts: int = 2) -> bool:
+              invalid_hits = 0
+              for _ in range(attempts):
+                  result = probe_once(url)
+                  if result == "valid":
+                      return True
+                  if result == "invalid":
+                      invalid_hits += 1
+              return invalid_hits < attempts
+          
+          kept = []
+          removed = []
+          for line in lines:
+              s = line.strip()
+              if not s or s.startswith("#") or (s.startswith("[") and s.endswith("]")):
+                  kept.append(line)
+                  continue
+              if s.startswith("http://") or s.startswith("https://"):
+                  if is_valid(s):
+                      kept.append(line)
+                  else:
+                      removed.append(s)
+                  continue
+              kept.append(line)
+          
+          new_content = "\n".join(kept)
+          if original.endswith("\n"):
+              new_content += "\n"
+          
+          if new_content != original:
+              path.write_text(new_content, encoding="utf-8")
+          
+          print(f"removed_total={len(removed)}")
+          if removed:
+              print("removed_urls=")
+              for url in removed:
+                  print(url)
+          PY
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add config/subscribe.txt || true
+          if ! git diff --staged --quiet; then
+            git commit -m "Clean invalid subscribe urls"
+            git push
+          fi
