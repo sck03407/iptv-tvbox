@@ -81,7 +81,9 @@ jobs:
             lscr.io/linuxserver/webgrabplus:latest \
             /bin/bash -c "set -e; \
               echo 'diag: installing iptables for network spoofing'; \
-              apt-get update && apt-get install -y iptables || echo 'Failed to install iptables'; \
+              if command -v apk >/dev/null; then apk add --no-cache iptables; \
+              elif command -v apt-get >/dev/null; then apt-get update && apt-get install -y iptables; \
+              else echo 'No package manager found'; fi; \
               echo 'diag: applying iptables NAT rule to redirect all ICMP ping to localhost'; \
               iptables -t nat -A OUTPUT -p icmp --icmp-type echo-request -j DNAT --to-destination 127.0.0.1 || echo 'Failed to apply iptables rule'; \
               echo 'diag: verifying ping spoof (should succeed locally)'; ping -c 1 webgrabplus.com || echo 'Ping still failed'; \
