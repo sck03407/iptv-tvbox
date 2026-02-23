@@ -83,10 +83,12 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          git config --global advice.addIgnoredFile false
           # Add the synced siteini pack files to git
           git add config/webgrabplus/siteini.pack/China/*
           git add output/epg/custom_epg.xml || true
           if ! git diff --staged --quiet; then
             git commit -m "Update custom EPG and sync SiteIni Pack"
+            git pull --rebase
             git push
           fi
