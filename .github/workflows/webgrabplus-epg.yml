@@ -69,6 +69,8 @@ jobs:
           
           docker run --rm \
             --hostname webgrabplus \
+            --dns 8.8.8.8 \
+            --dns 223.5.5.5 \
             -e PUID=1000 \
             -e PGID=1000 \
             -e TZ=Asia/Shanghai \
@@ -76,6 +78,13 @@ jobs:
             -v ${{ github.workspace }}/output:/data \
             lscr.io/linuxserver/webgrabplus:latest \
             /bin/bash -c "set -e; if [ -x /app/dotnet/dotnet ] && [ -f /app/wg++/bin.net/WebGrab+Plus.dll ]; then /app/dotnet/dotnet /app/wg++/bin.net/WebGrab+Plus.dll /config; elif [ -x /usr/bin/dotnet ] && [ -f /app/wg++/bin.net/WebGrab+Plus.dll ]; then dotnet /app/wg++/bin.net/WebGrab+Plus.dll /config; else echo \"WebGrab+Plus executable not found\"; ls -la /app /app/wg++ /app/wg++/bin.net || true; exit 1; fi"
+          if [ ! -f output/epg/custom_epg.xml ]; then
+            echo "custom_epg.xml not generated"
+            if [ -f config/webgrabplus/WebGrab++.log.txt ]; then
+              tail -n 200 config/webgrabplus/WebGrab++.log.txt
+            fi
+            exit 1
+          fi
             
       - name: Commit and push if changed
         run: |
