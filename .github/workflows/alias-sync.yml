@@ -30,8 +30,12 @@ jobs:
       - name: Sync alias list
         run: |
           ALIAS_URL="${{ inputs.alias_url }}"
+          if [ -z "$ALIAS_URL" ]; then
+            echo "Alias URL is empty"
+            exit 1
+          fi
           TMP_FILE="$(mktemp)"
-          if curl -fsSL "$ALIAS_URL" -o "$TMP_FILE"; then
+          if curl -fsSL --retry 3 --retry-delay 2 --retry-all-errors --connect-timeout 15 --max-time 60 "$ALIAS_URL" -o "$TMP_FILE"; then
             if [ -s "$TMP_FILE" ]; then
               if ! cmp -s "$TMP_FILE" "config/alias.txt"; then
                 mv "$TMP_FILE" "config/alias.txt"
