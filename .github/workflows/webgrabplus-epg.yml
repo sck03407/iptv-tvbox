@@ -68,9 +68,8 @@ jobs:
           fi
           
           docker run --rm \
+            --network host \
             --hostname webgrabplus \
-            --dns 8.8.8.8 \
-            --dns 223.5.5.5 \
             -e PUID=1000 \
             -e PGID=1000 \
             -e TZ=Asia/Shanghai \
