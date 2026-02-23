@@ -37,8 +37,8 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add config/subscribe.txt output/subscribe/ipv4.txt output/subscribe/ipv6.txt || true
+          git add config/subscribe.txt || true
           if ! git diff --staged --quiet; then
-            git commit -m "Clean invalid subscribe urls and update ip classification"
+            git commit -m "Clean invalid subscribe urls"
             git push
           fi

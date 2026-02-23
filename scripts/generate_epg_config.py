@@ -79,11 +79,52 @@ def main():
                     channels_buffer.append(f"  {ch['line']}")
                     added_xmltv_ids.add(ch['xmltv_id'])
 
-    config_content += "\n".join(channels_buffer)
-    config_content += "\n</settings>"
+    # 3. Chunk and Write Configs
+    MAX_CHANNELS = 18  # Safe limit under 20
+    chunks = [channels_buffer[i:i + MAX_CHANNELS] for i in range(0, len(channels_buffer), MAX_CHANNELS)]
     
-    output_config.write_text(config_content, encoding='utf-8')
-    print(f"Generated WebGrab++.config.xml with {len(channels_buffer)} channels.")
+    if not chunks:
+        chunks = [[]] # Handle empty case
+
+    for idx, chunk in enumerate(chunks):
+        chunk_config = f"""<?xml version="1.0"?>
+<settings>
+  <filename>/data/epg/custom_epg_{idx}.xml</filename>
+  <mode>v</mode>
+  <postprocess grab="y" run="n">rex</postprocess>
+  <user-agent>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36</user-agent>
+  <logging>on</logging>
+  <retry time-out="5">4</retry>
+  <timespan>8</timespan>
+  <update>i</update>
+
+  <!-- Auto-generated Channel Chunk {idx} -->
+"""
+        chunk_config += "\n".join(chunk)
+        chunk_config += "\n</settings>"
+        
+        chunk_file = config_dir / f"WebGrab++.config.{idx}.xml"
+        chunk_file.write_text(chunk_config, encoding='utf-8')
+        print(f"Generated WebGrab++.config.{idx}.xml with {len(chunk)} channels.")
+
+    # Also generate full config for reference (optional, but good for backup)
+    full_config = f"""<?xml version="1.0"?>
+<settings>
+  <filename>/data/epg/custom_epg_full.xml</filename>
+  <mode>v</mode>
+  <postprocess grab="y" run="n">rex</postprocess>
+  <user-agent>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36</user-agent>
+  <logging>on</logging>
+  <retry time-out="5">4</retry>
+  <timespan>8</timespan>
+  <update>i</update>
+
+  <!-- Full Channel List (Reference) -->
+"""
+    full_config += "\n".join(channels_buffer)
+    full_config += "\n</settings>"
+    output_config.write_text(full_config, encoding='utf-8')
+    print(f"Generated full WebGrab++.config.xml with {len(channels_buffer)} channels.")
 
 if __name__ == "__main__":
     main()

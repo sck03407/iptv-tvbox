@@ -112,56 +112,6 @@ def classify_url(url: str, attempts: int = 2) -> str:
             invalid_hits += 1
     return "invalid" if invalid_hits >= attempts else "unknown"
 
-def classify_ip_type(url: str) -> str:
-    parts = urlsplit(url)
-    hostname = parts.hostname
-    if not hostname:
-        return "unknown"
-        
-    # Check for IP literal
-    try:
-        import ipaddress
-        ip = ipaddress.ip_address(hostname)
-        if ip.version == 4:
-            return "ipv4"
-        elif ip.version == 6:
-            return "ipv6"
-    except ValueError:
-        pass
-        
-    # Resolve domain
-    try:
-        import socket
-        
-        has_ipv4 = False
-        has_ipv6 = False
-        
-        # Check IPv4
-        try:
-            socket.getaddrinfo(hostname, None, socket.AF_INET)
-            has_ipv4 = True
-        except socket.gaierror:
-            pass
-            
-        # Check IPv6
-        try:
-            socket.getaddrinfo(hostname, None, socket.AF_INET6)
-            has_ipv6 = True
-        except socket.gaierror:
-            pass
-            
-        if has_ipv4 and not has_ipv6:
-            return "ipv4"
-        if has_ipv6 and not has_ipv4:
-            return "ipv6"
-        if has_ipv4 and has_ipv6:
-            return "dual"
-            
-    except Exception:
-        pass
-        
-    return "unknown"
-
 def main():
     path = Path("config/subscribe.txt")
     try:
@@ -244,32 +194,8 @@ def main():
     # Write to GitHub Summary
     summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
     if summary_path:
-        Path(summary_path).write_text(report_content, encoding="utf-8")
-        
-    # Generate IPv4/IPv6 classification files
-    ipv4_urls = []
-    ipv6_urls = []
-    
-    # Only classify valid/kept urls
-    # We need to process 'kept' lines to extract URLs
-    for line in kept:
-        s = line.strip()
-        if s.startswith("http://") or s.startswith("https://"):
-            # Determine IP type
-            ip_type = classify_ip_type(s)
-            if ip_type == "ipv4":
-                ipv4_urls.append(s)
-            elif ip_type == "ipv6":
-                ipv6_urls.append(s)
-            elif ip_type == "dual":
-                ipv4_urls.append(s)
-                ipv6_urls.append(s)
-
-    Path("output/subscribe").mkdir(parents=True, exist_ok=True)
-    if ipv4_urls:
-        Path("output/subscribe/ipv4.txt").write_text("\n".join(ipv4_urls) + "\n", encoding="utf-8")
-    if ipv6_urls:
-        Path("output/subscribe/ipv6.txt").write_text("\n".join(ipv6_urls) + "\n", encoding="utf-8")
+        with open(summary_path, "a", encoding="utf-8") as f:
+            f.write(report_content)
 
 if __name__ == "__main__":
     main()

@@ -7,4 +7,4 @@ https://raw.githubusercontent.com/fanmingming/live/main/e.xml
 https://assets.livednow.com/epg.xml
 
 # 如果你使用了 Generate Custom EPG 工作流生成了自定义 EPG，请添加以下地址（替换 <username> 为你的 GitHub 用户名）：
-# https://raw.githubusercontent.com/sck03407/iptv-tvbox/main/output/epg/custom_epg.xml
+https://raw.githubusercontent.com/sck03407/iptv-tvbox/main/output/epg/custom_epg.xml

@@ -59,13 +59,18 @@ jobs:
       - name: Generate WebGrab++.config.xml
         run: |
           python scripts/generate_epg_config.py
-      - name: Run WebGrab+Plus
+      - name: Run WebGrab+Plus (Optimized)
         run: |
           chmod -R 777 output
           mkdir -p output/epg
           if ls config/webgrabplus/siteini.pack/China/*.ini 1> /dev/null 2>&1; then
             cp config/webgrabplus/siteini.pack/China/*.ini config/webgrabplus/
           fi
+          
+          # Ensure execution script is executable
+          chmod +x scripts/run_webgrab.sh
+          
+          echo "Starting optimized WebGrab+Plus container..."
           
           docker run --rm \
             --hostname webgrabplus \
@@ -78,31 +83,19 @@ jobs:
             -e TZ=Asia/Shanghai \
             -v ${{ github.workspace }}/config/webgrabplus:/config \
             -v ${{ github.workspace }}/output:/data \
+            -v ${{ github.workspace }}/scripts/run_webgrab.sh:/run_webgrab.sh \
             lscr.io/linuxserver/webgrabplus:latest \
-            /bin/bash -c "set -e; \
-              echo 'diag: installing iptables for network spoofing'; \
-              if command -v apk >/dev/null; then apk add --no-cache iptables; \
-              elif command -v apt-get >/dev/null; then apt-get update && apt-get install -y iptables; \
-              else echo 'No package manager found'; fi; \
-              echo 'diag: applying iptables NAT rule to redirect all ICMP ping to localhost'; \
-              iptables -t nat -A OUTPUT -p icmp --icmp-type echo-request -j DNAT --to-destination 127.0.0.1 || echo 'Failed to apply iptables rule'; \
-              echo 'diag: verifying ping spoof (should succeed locally)'; ping -c 1 webgrabplus.com || echo 'Ping still failed'; \
-              echo 'diag: verifying http access (should succeed remotely)'; curl -I -m 5 https://webgrabplus.com || echo 'HTTP failed'; \
-              echo 'diag: running webgrabplus...'; \
-              if [ -x /app/dotnet/dotnet ] && [ -f /app/wg++/bin.net/WebGrab+Plus.dll ]; then \
-                /app/dotnet/dotnet /app/wg++/bin.net/WebGrab+Plus.dll /config; \
-              elif [ -x /usr/bin/dotnet ] && [ -f /app/wg++/bin.net/WebGrab+Plus.dll ]; then \
-                dotnet /app/wg++/bin.net/WebGrab+Plus.dll /config; \
-              else \
-                echo \"WebGrab+Plus executable not found\"; ls -la /app /app/wg++ /app/wg++/bin.net || true; exit 1; \
-              fi"
+            /bin/bash /run_webgrab.sh
+
+      - name: Merge EPG Chunks
+        run: |
+          python scripts/merge_epg.py
           if [ ! -f output/epg/custom_epg.xml ]; then
             echo "custom_epg.xml not generated"
-            if [ -f config/webgrabplus/WebGrab++.log.txt ]; then
-              tail -n 200 config/webgrabplus/WebGrab++.log.txt
-            fi
             exit 1
           fi
+          # Cleanup partial chunks
+          rm -f output/epg/custom_epg_*.xml
             
       - name: Commit and push if changed
         run: |
