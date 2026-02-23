@@ -82,7 +82,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git config --global advice.addIgnoredFile false
-          git add output version.json config/alias.txt || true
+          git add output version.json || true
           if ! git diff --staged --quiet; then
             git commit -m "Github Action Auto Updated"
             git pull --rebase

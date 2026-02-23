@@ -68,10 +68,15 @@ jobs:
           fi
           
           docker run --rm \
+            --hostname webgrabplus \
+            --mac-address=00:00:00:00:00:00 \
+            -e PUID=1000 \
+            -e PGID=1000 \
+            -e TZ=Asia/Shanghai \
             -v ${{ github.workspace }}/config/webgrabplus:/config \
             -v ${{ github.workspace }}/output:/data \
             lscr.io/linuxserver/webgrabplus:latest \
-            /bin/bash -c "set -e; exe=$(find / -name \"WebGrab+Plus.exe\" -print -quit); if [ -z \"$exe\" ]; then echo \"WebGrab+Plus.exe not found\"; exit 1; fi; mono \"$exe\" \"/config\""
+            /bin/bash -c "set -e; if [ -x /app/dotnet/dotnet ] && [ -f /app/wg++/bin.net/WebGrab+Plus.dll ]; then /app/dotnet/dotnet /app/wg++/bin.net/WebGrab+Plus.dll /config; elif [ -x /usr/bin/dotnet ] && [ -f /app/wg++/bin.net/WebGrab+Plus.dll ]; then dotnet /app/wg++/bin.net/WebGrab+Plus.dll /config; else echo \"WebGrab+Plus executable not found\"; ls -la /app /app/wg++ /app/wg++/bin.net || true; exit 1; fi"
             
       - name: Commit and push if changed
         run: |
