@@ -173,6 +173,7 @@ def main():
     
     kept = []
     removed = []
+    unknown = []
     total_checked = 0
     valid_count = 0
     invalid_count = 0
@@ -194,6 +195,7 @@ def main():
                 removed.append(s)
             else:
                 unknown_count += 1
+                unknown.append(s)
                 kept.append(line)
             continue
         kept.append(line)
@@ -215,9 +217,6 @@ def main():
         for url in removed:
             print(url)
 
-    # Create output directory
-    Path("output/subscribe").mkdir(parents=True, exist_ok=True)
-    
     summary_lines = [
         "## 订阅源体检报告",
         f"- 检测总数: {total_checked}",
@@ -232,6 +231,13 @@ def main():
             summary_lines.append(f"- {url}")
         if len(removed) > 50:
             summary_lines.append(f"- ... 其余 {len(removed) - 50} 条已省略")
+    if unknown:
+        summary_lines.append("")
+        summary_lines.append("### 不确定(保留)链接")
+        for url in unknown[:50]:
+            summary_lines.append(f"- {url}")
+        if len(unknown) > 50:
+            summary_lines.append(f"- ... 其余 {len(unknown) - 50} 条已省略")
     
     report_content = "\n".join(summary_lines) + "\n"
     
@@ -240,9 +246,6 @@ def main():
     if summary_path:
         Path(summary_path).write_text(report_content, encoding="utf-8")
         
-    # Write to file
-    Path("output/subscribe/report.md").write_text(report_content, encoding="utf-8")
-
     # Generate IPv4/IPv6 classification files
     ipv4_urls = []
     ipv6_urls = []

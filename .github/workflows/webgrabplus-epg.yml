@@ -70,6 +70,7 @@ jobs:
           docker run --rm \
             --network host \
             --hostname webgrabplus \
+            --cap-add=NET_RAW \
             -e PUID=1000 \
             -e PGID=1000 \
             -e TZ=Asia/Shanghai \
