@@ -2,7 +2,7 @@ name: 'Update IPTV Sources'
 
 on:
   schedule:
-    - cron: '0 10 */2 * *'
+    - cron: '0 10 */2 * *' # UTC 10:00 -> Beijing 18:00 (Every 2 days)
   workflow_dispatch:
     branches:
       - main
