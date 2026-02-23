@@ -4,6 +4,7 @@ tqdm==4.67.1
 async-timeout==5.0.1
 aiohttp==3.13.3
 flask==3.1.2
+flask-cors
 opencc-python-reimplemented==0.1.7
 # gunicorn==23.0.0
 pillow==11.1.0

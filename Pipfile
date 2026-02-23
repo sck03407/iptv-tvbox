@@ -22,6 +22,7 @@ pillow = "==11.1.0"
 m3u8 = "==6.0.0"
 pytz = "==2025.1"
 ipip-ipdb = "==1.6.1"
+flask-cors = "==6.0.2"
 
 [requires]
 python_version = "3.13"

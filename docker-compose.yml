@@ -1,20 +1,74 @@
+version: '3.8'
+
 services:
+  # IPTV-TVBox: 直播源与点播源管理后台
   iptv-tvbox:
-    image: ghcr.io/<你的GitHub用户名>/iptv-tvbox:latest
+    # 使用 GitHub 预构建镜像 (请确保将 yourusername 替换为您的 GitHub 用户名，或设置 GITHUB_ACTOR 环境变量)
+    image: ghcr.io/${GITHUB_ACTOR:-yourusername}/iptv-tvbox:latest
+    # 如果想使用本地构建的镜像，请取消注释下一行并注释掉上一行
+    # build: .
+    # image: iptv-tvbox:local
     container_name: iptv-tvbox
     restart: unless-stopped
-
     ports:
       - "51888:51888"
-
     volumes:
       - ./config:/iptv-api/config
       - ./output:/iptv-api/output
-
+      - ./source.json:/iptv-api/source.json
     environment:
-      PUBLIC_SCHEME: "http"
-      PUBLIC_DOMAIN: "127.0.0.1"
+      # 建议修改为您的实际局域网IP，方便 MoonTVPlus 访问
+      PUBLIC_DOMAIN: "127.0.0.1" 
       PUBLIC_PORT: "51888"
       NGINX_HTTP_PORT: "51888"
-      CDN_URL: ""
-      HTTP_PROXY: ""
+      TZ: Asia/Shanghai
+
+  # MoonTVPlus: 增强版影视聚合播放器 (Web UI)
+  moontv:
+    image: ghcr.io/mtvpls/moontvplus:latest
+    container_name: moontv
+    restart: on-failure
+    ports:
+      - "3000:3000"
+    environment:
+      - USERNAME=admin
+      - PASSWORD=admin
+      - NEXT_PUBLIC_STORAGE_TYPE=redis
+      - REDIS_URL=redis://moontv-redis:6379
+      # Kvrocks (可选): 使用 Kvrocks 时启用以下两行并注释 Redis
+      # NEXT_PUBLIC_STORAGE_TYPE=kvrocks
+      # KVROCKS_URL=redis://moontv-kvrocks:6666
+      # 允许 iframe 嵌入 (可选)
+      - ALLOW_IFRAME=true
+    depends_on:
+      - moontv-redis
+    networks:
+      - moontv-network
+
+  # MoonTVPlus 依赖的 Redis 数据库
+  moontv-redis:
+    image: redis:alpine
+    container_name: moontv-redis
+    restart: unless-stopped
+    volumes:
+      - moontv-data:/data
+    networks:
+      - moontv-network
+
+  # Kvrocks (可选): 兼容 Redis 协议的持久化存储
+  # moontv-kvrocks:
+  #   image: apache/kvrocks
+  #   container_name: moontv-kvrocks
+  #   restart: unless-stopped
+  #   volumes:
+  #     - kvrocks-data:/var/lib/kvrocks
+  #   networks:
+  #     - moontv-network
+
+networks:
+  moontv-network:
+    driver: bridge
+
+volumes:
+  moontv-data:
+  # kvrocks-data:

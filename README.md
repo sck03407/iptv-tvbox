@@ -1,175 +1,227 @@
-# IPTV-TVBox 自用项目
+# IPTV-TVBox
 
-这是一个基于 `iptv-api` 优化的个人 IPTV 直播源与点播源管理平台。
+**一站式 IPTV 直播源与点播源管理平台**
 
-## ✨ 核心功能
+> 🚀 **最佳拍档**: 本项目与 [MoonTVPlus](https://github.com/mtvpls/MoonTVPlus) 深度集成，打造“后端自动管理 + 前端极速播放”的家庭影音中心。
 
-*   **📺 直播源聚合 (Live)**
-    *   **自动测速**: 定时获取并测速验证，过滤无效源。
-    *   **多源支持**: 集成 GitHub 优质源（Migu、China-TV-Live、BRTV 等）。
-    *   **组播优化**: 包含全国各省市电信/联通/移动组播源配置，支持 RTP 转 HTTP/M3U。
-    *   **EPG 支持**: 自动生成节目单信息。
-    *   **自定义频道**: 通过 `config/demo.txt` 灵活配置频道列表。
-    *   **订阅源体检**: 手动运行工作流生成检测报告，保守剔除无效链接，并支持按 IPv4/IPv6 分类导出结果。
+## ✨ 项目价值
 
-*   **🎬 点播源集成 (VOD)**
-    *   **优质接口**: 集成 `qist/tvbox` 等大神维护的高质量点播配置（饭太硬、FongMi、OK影视等）。
-    *   **一键配置**: 提供 `source.json` 文件，直接导入 TVBox 即可使用。
+- **后端自动化**: 定时抓取优质源，自动去重、测速、验证，持续输出稳定列表
+- **前端体验**: Web 端即开即用，适配多终端，观影体验接近原生播放器
+- **标准接口**: 输出 M3U/JSON/EPG，便于任意播放器或前端接入
 
-*   **🚀 部署支持**
-    *   **GitHub Actions**: 自动化构建与部署。
-    *   **Docker**: 支持一键部署到 GHCR (GitHub Container Registry) 或本地运行。
+## 🎯 功能概览
 
-## 📂 快速上手
+### 🛠️ 后端能力 (IPTV-TVBox)
+- **全自动聚合**: GitHub 优质源 + 运营商组播源自动整合
+- **智能生成**:
+  - **直播**: 自动生成带 EPG 和台标的 M3U
+  - **点播**: 自动生成 TVBox 专用 `source.json`
+- **IPv4/IPv6 双栈**: 自动生成对应清单
+- **开放 API**: 统一 HTTP 接口，支持任何兼容 M3U/JSON 的播放器
 
-### 1. 获取直播源结果
-程序运行后（或 GitHub Actions 自动运行后），结果文件位于 `output/` 目录：
-*   **M3U 格式**: `output/result.m3u` (推荐，含图标和 EPG)
-*   **TXT 格式**: `output/result.txt` (适用于旧版播放器)
+### 📺 前端能力 (MoonTVPlus)
+- **多源聚合搜索**: 一次搜索返回全源结果
+- **丰富详情页**: 剧集、演员、年份、简介完整展示
+- **流畅在线播放**: HLS.js + ArtPlayer 组合
+- **收藏与进度同步**: 支持多端同步播放进度
+- **PWA 与响应式**: 移动端和桌面端自适应
+- **外部播放器跳转**: PotPlayer、VLC、MPV、MX Player、nPlayer、IINA 等
+- **视频超分**: Anime4K WebGPU 实时增强
+- **弹幕系统**: 搜索、匹配、加载与屏蔽
+- **评论抓取**: 豆瓣短评分页展示
+- **自定义去广告**: 可扩展过滤逻辑
+- **观影室**: 多人同步观影与互动（实验性）
+- **M3U8 完整下载**: 合并切片输出完整视频
+- **服务器离线下载**: 断点续传，提前缓存秒开
+- **私人影库**: 支持 OpenList 或 Emby 接入
 
-**引用地址 (示例)**:
-```
-https://raw.githubusercontent.com/<你的用户名>/iptv-tvbox/master/output/result.m3u
-```
+## 🧱 架构与流程
 
-### 2. 配置 TVBox 点播源
-在 TVBox 客户端设置中，使用以下地址作为数据源：
-```
-https://raw.githubusercontent.com/<你的用户名>/iptv-tvbox/master/source.json
-```
-该文件已内置了多个高质量的点播接口，支持自动更新。
+- IPTV-TVBox 定时聚合源并生成 M3U/JSON/EPG
+- MoonTVPlus 订阅接口后提供搜索、播放、互动等前端能力
+- 观影进度与收藏通过存储服务持久化
 
-### 3. 订阅源体检（可选）
-在 GitHub Actions 中手动运行 `Check subscribe urls`，会输出订阅源检测报告，保守清理无效链接，并生成 `output/subscribe/ipv4.txt` 和 `output/subscribe/ipv6.txt` 分类结果。
+## 🚀 极速部署 (Docker Compose)
 
-## ⚙️ 配置文件说明
+我们准备了开箱即用的组合部署方案，一键启动完整生态。
 
-所有核心配置位于 `config/` 目录：
+### 1. 启动服务
 
-| 文件名 | 说明 |
-| :--- | :--- |
-| **config.ini** | 核心配置文件（测速参数、过滤规则、功能开关等） |
-| **subscribe.txt** | 直播订阅源列表（已集成 Migu、央视、卫视等优质源） |
-| **demo.txt** | 频道分类与排序模板（决定最终结果的频道顺序） |
-| **epg.txt** | EPG 节目单来源列表（可插拔按需维护） |
-| **rtp/** | 各省市组播源列表（用于组播转单播场景） |
-
-## 🛠️ 本地运行与开发
-
-### 环境要求
-*   Python 3.13+
-*   FFmpeg (可选，用于分辨率检测和 RTMP 推流)
-
-### 安装与运行
 ```bash
-# 安装依赖
-pip install pipenv
-pipenv install --dev
+# 1. 下载项目
+git clone https://github.com/<你的GitHub用户名>/iptv-tvbox.git
+cd iptv-tvbox
 
-# 启动更新与测速
-pipenv run dev
-
-# 启动 Web 服务 (可选)
-pipenv run service
+# 2. 启动服务 (默认使用 GitHub 预构建镜像)
+# 注意：如果是本地部署，建议设置环境变量 GITHUB_ACTOR=<你的GitHub用户名>
+docker-compose up -d
 ```
 
-### 🐳 Docker 部署指南
+> 💡 **提示**: 默认会启动 `iptv-tvbox` (后端)、`moontvplus` (前端) 和 `redis` (存储) 三个容器。
 
-本项目支持多种 Docker 部署方式，您可以选择使用 GitHub 自动构建的镜像 (GHCR)，也可以在本地手动构建。
+### 2. 服务访问
 
-#### 1. 使用 GitHub 容器镜像 (推荐)
+| 服务 | 地址 | 默认账号 | 说明 |
+| :--- | :--- | :--- | :--- |
+| **播放器 (前端)** | `http://localhost:3000` | `admin` / `admin` | 日常观影入口 |
+| **管理后台** | `http://localhost:51888` | 无需账号 | 数据接口与日志 |
 
-如果您已经 Fork 本项目并启用了 GitHub Actions，镜像会自动构建并发布到您的 GitHub Packages (GHCR)。
+### 3. 存储建议（关键）
 
-**前提条件**：
-1. 确保您的机器已安装 Docker。
-2. 将 `<你的GitHub用户名>` 替换为您的实际 GitHub 用户名（小写）。
+- **Kvrocks（推荐）**: 兼容 Redis 协议，持久化更稳，适合收藏与播放进度
+- **Redis（可用但有风险）**: 未开启持久化或内存淘汰时可能丢数据
 
-**运行命令**：
+如需切换存储，仅需保证 MoonTVPlus 的 `NEXT_PUBLIC_STORAGE_TYPE` 与 `REDIS_URL` 指向对应实例即可。Kvrocks 与 Redis 通常可复用同一连接参数。
+
+### 4. Docker 部署数据库说明
+
+- **默认行为**: `docker-compose.yml` 已包含 `moontv-redis` 容器并挂载 `moontv-data` 卷，实现基础持久化
+- **使用 Kvrocks**: 将 `moontv-redis` 替换为 Kvrocks 镜像，并将 `REDIS_URL` 指向 Kvrocks 容器
+- **保留 Redis**: 如需更高可靠性，建议开启 AOF 或 RDB 持久化并为数据卷设置备份策略
+- **远程存储**: `REDIS_URL` 可指向局域网或云端实例，便于多设备共享观看进度
+ - **Kvrocks 挂载目录**: 建议挂载到 `/var/lib/kvrocks`，便于数据持久化与版本兼容
+
+#### Kvrocks docker-compose 示例
+
+```yaml
+services:
+  moontv-core:
+    image: ghcr.io/mtvpls/moontvplus:latest
+    container_name: moontv-core
+    restart: on-failure
+    ports:
+      - "3000:3000"
+    environment:
+      - USERNAME=admin
+      - PASSWORD=admin_password
+      - NEXT_PUBLIC_STORAGE_TYPE=kvrocks
+      - KVROCKS_URL=redis://moontv-kvrocks:6666
+    networks:
+      - moontv-network
+    depends_on:
+      - moontv-kvrocks
+  moontv-kvrocks:
+    image: apache/kvrocks
+    container_name: moontv-kvrocks
+    restart: unless-stopped
+    volumes:
+      - kvrocks-data:/var/lib/kvrocks
+    networks:
+      - moontv-network
+
+networks:
+  moontv-network:
+    driver: bridge
+
+volumes:
+  kvrocks-data:
+```
+
+## 🔌 配置指南：连接前后端
+
+首次启动 MoonTVPlus 后，需要完成以下订阅配置：
+
+1. 打开浏览器访问 `http://localhost:3000` (或局域网 IP)
+2. 登录 `admin/admin`
+3. 进入 **设置 (Settings)** -> **订阅管理 (Subscription)**
+4. 添加以下订阅源
+
+### 📺 直播源 (Live TV)
+- **名称**: `IPTV-TVBox` (或任意名称)
+- **类型**: `M3U`
+- **地址**: `http://<本机局域网IP>:51888/m3u`
+  - 仅需 IPv6 频道时使用 `/ipv6/m3u`
+
+### 🎬 点播源 (VOD)
+- **名称**: `TVBox VOD`
+- **类型**: `TVBox (JSON)`
+- **地址**: `http://<本机局域网IP>:51888/source.json`
+
+### 📅 电子节目单 (EPG)
+- **地址**: `http://<本机局域网IP>:51888/epg/epg.xml`
+
+> ⚠️ **重要提示**: 在 Docker 环境中，`localhost` 指向容器自身，因此必须填写宿主机局域网 IP（如 `192.168.1.5`），不要使用 `127.0.0.1`。
+
+## 📂 进阶配置与自定义
+
+所有核心配置位于 `config/` 目录，修改后重启容器即可生效。
+
+### 1. 频道管理 (`config/`)
+- `demo.txt`: 频道分类与排序模板
+- `subscribe.txt`: 直播订阅源列表
+- `blacklist.txt`: 黑名单
+
+### 2. 参数调整 (`config/config.ini`)
+- `open_update`: 是否开启自动更新
+- `urls_limit`: 每个频道保留的源数量
+- `ipv6_support`: 是否优先检测 IPv6 源
+
+### 3. Logo 与 EPG
+- **Logo**: 图片放入 `config/logo/`，文件名需与频道名一致
+- **EPG**: 文件输出在 `output/epg/epg.xml`
+
+## 🛠️ 其他部署方式
+
+### 纯 Docker 部署 (仅后台)
+
+如果仅作为源管理工具使用：
+
 ```bash
-# 1. 拉取最新镜像
-docker pull ghcr.io/<你的GitHub用户名>/iptv-tvbox:latest
-
-# 2. 启动容器
 docker run -d \
   --name iptv-tvbox \
   --restart unless-stopped \
   -p 51888:51888 \
   -v $(pwd)/config:/iptv-api/config \
   -v $(pwd)/output:/iptv-api/output \
+  -v $(pwd)/source.json:/iptv-api/source.json \
   -e TZ=Asia/Shanghai \
   ghcr.io/<你的GitHub用户名>/iptv-tvbox:latest
 ```
 
-**参数说明**：
-*   `-p 51888:51888`: 映射服务端口，启动后访问 `http://localhost:51888`。
-*   `-v $(pwd)/config:/iptv-api/config`: **关键配置**，挂载本地 `config` 目录到容器，方便随时修改配置（如 `config.ini`, `subscribe.txt`）。
-*   `-v $(pwd)/output:/iptv-api/output`: **结果持久化**，挂载 `output` 目录，确保生成的 M3U/TXT 文件保存在本地。
-*   `-e TZ=Asia/Shanghai`: 设置容器时区，确保定时任务时间正确。
+- **端口映射**: `51888:51888`
+- **配置挂载**: `-v $(pwd)/config:/iptv-api/config`
+- **结果挂载**: `-v $(pwd)/output:/iptv-api/output`
+- **源文件挂载**: `-v $(pwd)/source.json:/iptv-api/source.json`
 
-#### 2. 本地构建与运行
+### 独立部署 MoonTVPlus (仅前端)
 
-如果您修改了源码或需要自定义构建环境，可以使用此方法。
+如果需要连接远程的 IPTV-TVBox 后端：
 
-**构建镜像**：
-```bash
-# 在项目根目录下执行
-docker build -t iptv-tvbox-local .
-```
-
-**运行容器**：
 ```bash
 docker run -d \
-  --name iptv-tvbox-local \
-  -p 51888:51888 \
-  -v $(pwd)/config:/iptv-api/config \
-  -v $(pwd)/output:/iptv-api/output \
-  -e TZ=Asia/Shanghai \
-  iptv-tvbox-local
+  --name moontv \
+  --restart on-failure \
+  -p 3000:3000 \
+  -e USERNAME=admin \
+  -e PASSWORD=admin \
+  -e NEXT_PUBLIC_STORAGE_TYPE=redis \
+  -e REDIS_URL=redis://<storage-host>:6379 \
+  ghcr.io/mtvpls/moontvplus:latest
 ```
 
-#### 3. 使用 Docker Compose (更方便的管理方式)
+- **存储可选**: `REDIS_URL` 可指向 Redis 或 Kvrocks
+- **数据持久化**: 建议确保存储端开启持久化
 
-如果您不想每次都输入长命令，可以在项目根目录创建一个 `docker-compose.yml` 文件：
+## 🛠️ 常用命令
 
-```yaml
-version: '3.8'
-services:
-  iptv-tvbox:
-    # 方式一：使用远程镜像
-    image: ghcr.io/<你的GitHub用户名>/iptv-tvbox:latest
-    # 方式二：使用本地构建 (取消注释下一行)
-    # build: .
-    container_name: iptv-tvbox
-    restart: unless-stopped
-    ports:
-      - "51888:51888"
-    volumes:
-      - ./config:/iptv-api/config
-      - ./output:/iptv-api/output
-    environment:
-      - TZ=Asia/Shanghai
-```
-
-**启动服务**：
 ```bash
-docker-compose up -d
+# 更新镜像
+docker-compose pull
+
+# 重启服务
+docker-compose restart
+
+# 查看日志
+docker-compose logs -f iptv-tvbox
 ```
 
-**查看日志**：
-```bash
-docker-compose logs -f
-```
+## 🔗 资源与致谢
 
-#### 4. 常见问题
-*   **权限问题**：如果遇到 `Permission denied`，请尝试在命令前加 `sudo` (Linux/macOS)。
-*   **Windows 用户**：请确保 Docker Desktop 已启动，并将路径中的 `$(pwd)` 替换为绝对路径 (例如 `D:\iptv-tvbox\config`)，或者在 PowerShell 中使用 `${PWD}`。
-
-## 🔗 相关项目参考
-
-*   **[iptv-checker](https://github.com/zhimin-dev/iptv-checker)**: 专注于 IPTV 播放列表的有效性检测，提供 Docker 和桌面端工具，支持后台定时检查与可视化管理。本项目借用了其“定期体检”的思路，通过 GitHub Actions 实现轻量级的订阅源自动化清洗。
-*   **[webgrabplus-siteinipack](https://github.com/SilentButeo2/webgrabplus-siteinipack)**: 官方维护的 WebGrab+Plus 抓取配置包，包含全球大量 EPG 源站点的抓取规则。本项目目前的 EPG 采用整合好的 XML 接口，若有更深度的自定义抓取需求，可参考该项目的配置规则进行扩展。
-    > **新增功能**: 本项目已集成 `Generate Custom EPG` 工作流，利用 WebGrab+Plus 和该项目的 siteini 规则，支持自定义生成 EPG (默认演示抓取 CCTV-1)。配置文件位于 `config/webgrabplus/`。
+- **前端播放器**: [MoonTVPlus](https://github.com/mtvpls/MoonTVPlus) (感谢 mtvpls 的杰出工作)
+- **灵感来源**: [iptv-checker](https://github.com/zhimin-dev/iptv-checker)
+- **EPG 数据**: [webgrabplus-siteinipack](https://github.com/SilentButeo2/webgrabplus-siteinipack)
 
 ## ⚠️ 免责声明
-本项目仅供学习交流使用，所有数据源均来自互联网公开渠道，不存储任何视频文件。请勿用于商业用途。
+
+本项目仅供学习交流使用，所有数据源均来自互联网公开渠道，本项目不生产、不存储任何视频文件。请勿用于商业用途。

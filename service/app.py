@@ -4,6 +4,7 @@ import time
 
 sys.path.append(os.path.dirname(sys.path[0]))
 from flask import Flask, send_from_directory, make_response, request, jsonify, Response
+from flask_cors import CORS
 from utils.tools import get_result_file_content, resource_path, get_public_url
 from utils.config import config
 import utils.constants as constants
@@ -16,8 +17,14 @@ from werkzeug.utils import secure_filename
 import mimetypes
 
 app = Flask(__name__)
+CORS(app)
 log = logging.getLogger('werkzeug')
 log.setLevel(logging.ERROR)
+
+
+@app.route("/images/<path:filename>")
+def show_images(filename):
+    return send_from_directory(resource_path("static/images"), filename)
 
 
 @app.route("/")
@@ -98,6 +105,12 @@ def show_hls_ipv6_txt():
 @app.route("/m3u")
 def show_m3u():
     return get_result_file_content(path=config.final_file, file_type="m3u")
+
+
+@app.route("/source.json")
+def show_source_json():
+    return send_from_directory(resource_path(''), 'source.json', mimetype='application/json')
+
 
 
 @app.route("/hls/m3u")

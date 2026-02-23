@@ -10,7 +10,7 @@ COPY Pipfile* ./
 
 RUN apk update && apk add --no-cache gcc musl-dev python3-dev libffi-dev zlib-dev jpeg-dev wget make pcre-dev openssl-dev \
   && pip install pipenv \
-  && PIPENV_VENV_IN_PROJECT=1 pipenv install --deploy
+  && PIPENV_VENV_IN_PROJECT=1 pipenv install --skip-lock
 
 RUN wget https://nginx.org/download/nginx-${NGINX_VER}.tar.gz && \
     tar xzf nginx-${NGINX_VER}.tar.gz
