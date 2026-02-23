@@ -1,20 +1,22 @@
 name: Convert RTP to M3U
 
 on:
-  # 只保留手动触发工作流
   workflow_dispatch:
 
 jobs:
   convert:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: read
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.13'
           
       - name: Create output directory
         run: mkdir -p output/rtp
@@ -237,5 +239,9 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add output/rtp/
-          git commit -m "Update RTP to M3U conversion with simplified groups [Manual Trigger]" -a || echo "No changes to commit"
-          git push
+          if ! git diff --staged --quiet; then
+            git commit -m "Update RTP M3U outputs"
+            git push
+          else
+            echo "No changes to commit"
+          fi
