@@ -70,8 +70,9 @@ jobs:
           docker run --rm \
             --hostname webgrabplus \
             --mac-address 02:42:ac:11:00:02 \
-            --dns 8.8.8.8 \
+            --cap-add=NET_ADMIN \
             --dns 223.5.5.5 \
+            --dns 119.29.29.29 \
             -e PUID=1000 \
             -e PGID=1000 \
             -e TZ=Asia/Shanghai \
@@ -80,7 +81,7 @@ jobs:
             lscr.io/linuxserver/webgrabplus:latest \
             /bin/bash -c "set -e; \
               echo 'diag: check ping binary location'; which ping || true; \
-              echo 'diag: setup ping mocks with logging'; \
+              echo 'diag: setup ping mocks (backup)'; \
               printf '#!/bin/sh\necho \"[mock] ping called with args: \$*\" >> /data/ping_mock.log\nexit 0\n' > /tmp/ping; \
               printf '#!/bin/sh\necho \"[mock] ping6 called with args: \$*\" >> /data/ping_mock.log\nexit 0\n' > /tmp/ping6; \
               chmod +x /tmp/ping /tmp/ping6; \
@@ -89,7 +90,12 @@ jobs:
               cp /tmp/ping6 /bin/ping6; \
               if [ -f /usr/bin/ping ]; then cp /tmp/ping /usr/bin/ping; fi; \
               if [ -f /usr/bin/ping6 ]; then cp /tmp/ping6 /usr/bin/ping6; fi; \
-              echo 'diag: testing mock ping'; ping -c 1 8.8.8.8; \
+              echo 'diag: spoofing connectivity check targets to localhost'; \
+              ip addr add 8.8.8.8/32 dev lo || echo 'Failed to add 8.8.8.8 to lo'; \
+              ip addr add 8.8.4.4/32 dev lo || echo 'Failed to add 8.8.4.4 to lo'; \
+              ip addr add 1.1.1.1/32 dev lo || echo 'Failed to add 1.1.1.1 to lo'; \
+              echo '127.0.0.1 www.google.com google.com' >> /etc/hosts; \
+              echo 'diag: testing connectivity to 8.8.8.8 (should be local)'; ping -c 1 8.8.8.8 || true; \
               echo 'diag: running webgrabplus...'; \
               if [ -x /app/dotnet/dotnet ] && [ -f /app/wg++/bin.net/WebGrab+Plus.dll ]; then \
                 /app/dotnet/dotnet /app/wg++/bin.net/WebGrab+Plus.dll /config; \
