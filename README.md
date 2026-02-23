@@ -10,6 +10,7 @@
     *   **组播优化**: 包含全国各省市电信/联通/移动组播源配置，支持 RTP 转 HTTP/M3U。
     *   **EPG 支持**: 自动生成节目单信息。
     *   **自定义频道**: 通过 `config/demo.txt` 灵活配置频道列表。
+    *   **订阅源体检**: 手动运行工作流生成检测报告，保守剔除无效链接，并支持按 IPv4/IPv6 分类导出结果。
 
 *   **🎬 点播源集成 (VOD)**
     *   **优质接口**: 集成 `qist/tvbox` 等大神维护的高质量点播配置（饭太硬、FongMi、OK影视等）。
@@ -38,6 +39,9 @@ https://raw.githubusercontent.com/<你的用户名>/iptv-tvbox/master/source.jso
 ```
 该文件已内置了多个高质量的点播接口，支持自动更新。
 
+### 3. 订阅源体检（可选）
+在 GitHub Actions 中手动运行 `Check subscribe urls`，会输出订阅源检测报告，保守清理无效链接，并生成 `output/subscribe/ipv4.txt` 和 `output/subscribe/ipv6.txt` 分类结果。
+
 ## ⚙️ 配置文件说明
 
 所有核心配置位于 `config/` 目录：
@@ -47,7 +51,7 @@ https://raw.githubusercontent.com/<你的用户名>/iptv-tvbox/master/source.jso
 | **config.ini** | 核心配置文件（测速参数、过滤规则、功能开关等） |
 | **subscribe.txt** | 直播订阅源列表（已集成 Migu、央视、卫视等优质源） |
 | **demo.txt** | 频道分类与排序模板（决定最终结果的频道顺序） |
-| **epg.txt** | EPG 节目单来源列表 |
+| **epg.txt** | EPG 节目单来源列表（可插拔按需维护） |
 | **rtp/** | 各省市组播源列表（用于组播转单播场景） |
 
 ## 🛠️ 本地运行与开发
@@ -160,6 +164,12 @@ docker-compose logs -f
 #### 4. 常见问题
 *   **权限问题**：如果遇到 `Permission denied`，请尝试在命令前加 `sudo` (Linux/macOS)。
 *   **Windows 用户**：请确保 Docker Desktop 已启动，并将路径中的 `$(pwd)` 替换为绝对路径 (例如 `D:\iptv-tvbox\config`)，或者在 PowerShell 中使用 `${PWD}`。
+
+## 🔗 相关项目参考
+
+*   **[iptv-checker](https://github.com/zhimin-dev/iptv-checker)**: 专注于 IPTV 播放列表的有效性检测，提供 Docker 和桌面端工具，支持后台定时检查与可视化管理。本项目借用了其“定期体检”的思路，通过 GitHub Actions 实现轻量级的订阅源自动化清洗。
+*   **[webgrabplus-siteinipack](https://github.com/SilentButeo2/webgrabplus-siteinipack)**: 官方维护的 WebGrab+Plus 抓取配置包，包含全球大量 EPG 源站点的抓取规则。本项目目前的 EPG 采用整合好的 XML 接口，若有更深度的自定义抓取需求，可参考该项目的配置规则进行扩展。
+    > **新增功能**: 本项目已集成 `Generate Custom EPG` 工作流，利用 WebGrab+Plus 和该项目的 siteini 规则，支持自定义生成 EPG (默认演示抓取 CCTV-1)。配置文件位于 `config/webgrabplus/`。
 
 ## ⚠️ 免责声明
 本项目仅供学习交流使用，所有数据源均来自互联网公开渠道，不存储任何视频文件。请勿用于商业用途。

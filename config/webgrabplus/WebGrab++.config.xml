@@ -1,0 +1,24 @@
+<settings>
+  <!-- Global Settings -->
+  <filename>/data/epg/custom_epg.xml</filename>
+  <mode>v</mode>
+  <postprocess grab="y" run="n">rex</postprocess>
+  <user-agent>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36</user-agent>
+  <logging>on</logging>
+  <retry time-out="5">4</retry>
+  <timespan>2</timespan>
+  <update>i</update>
+
+  <!-- Channel Configuration -->
+  <!-- 
+    警告 / Warning:
+    此文件现在由 GitHub Actions 工作流 (Generate Custom EPG) 自动生成/覆盖。
+    工作流会扫描 webgrabplus-siteinipack/China 目录下的所有 .channels.xml 文件，
+    并自动合并 tv.cctv.com, tv.mao.com, tvsou.com 等源的频道。
+    
+    本地编辑此文件可能在下次运行工作流时被覆盖，建议修改工作流脚本中的生成逻辑。
+    
+    当前预设示例仅供参考。
+  -->
+  <channel update="i" site="tv.cctv.com" site_id="cctv1" xmltv_id="CCTV-1">CCTV-1</channel>
+</settings>

@@ -1,0 +1,92 @@
+name: 'Generate Custom EPG'
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 20 * * 0' # UTC Sunday 20:00 -> Beijing Monday 04:00 (Weekly)
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate-epg-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  generate-epg:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Checkout SiteIni Pack (Upstream)
+        uses: actions/checkout@v4
+        with:
+          repository: SilentButeo2/webgrabplus-siteinipack
+          path: upstream_siteini
+          sparse-checkout: |
+            siteini.pack/China
+        continue-on-error: true
+      
+      - name: Sync SiteIni Pack to Local
+        run: |
+          # If upstream checkout failed (e.g. repo deleted), we skip sync and use local cache
+          if [ -d "upstream_siteini/siteini.pack/China" ]; then
+            echo "Upstream found, syncing..."
+            # Create local storage directory
+            mkdir -p config/webgrabplus/siteini.pack/China
+            
+            # Sync files from upstream to local repo storage
+            rsync -a --delete upstream_siteini/siteini.pack/China/ config/webgrabplus/siteini.pack/China/
+            
+            # Clean up upstream checkout
+            rm -rf upstream_siteini
+          else
+            echo "Upstream not found or checkout failed, using local cache."
+            if [ ! -d "config/webgrabplus/siteini.pack/China" ]; then
+               echo "Error: No local cache found either. Cannot proceed."
+               exit 1
+            fi
+          fi
+          
+      - name: Run with setup-python 3.13
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          update-environment: true
+      
+      - name: Generate WebGrab++.config.xml
+        run: |
+          python scripts/generate_epg_config.py
+      - name: Run WebGrab+Plus
+        # Use linuxserver/webgrabplus docker image
+        # We mount config directory to /config and output to /data
+        # Note: We need to change ownership of output directory to allow writing
+        # Also need to move siteini files to where WG++ expects them or configure it
+        # WG++ usually looks in siteini.pack folder relative to executable or config
+        # Here we just copy them to root of config for simplicity if needed, 
+        # BUT since we used siteini.pack structure, let's see if WG++ picks it up.
+        # If not, we copy .ini files to root of /config (which is mapped to config/webgrabplus)
+        run: |
+          chmod -R 777 output
+          if ls config/webgrabplus/siteini.pack/China/*.ini 1> /dev/null 2>&1; then
+            cp config/webgrabplus/siteini.pack/China/*.ini config/webgrabplus/
+          fi
+          
+          docker run --rm \
+            -v ${{ github.workspace }}/config/webgrabplus:/config \
+            -v ${{ github.workspace }}/output:/data \
+            linuxserver/webgrabplus:latest \
+            /bin/bash -c "cd /app/webgrabplus/bin && mono WebGrab+Plus.exe \"/config\"" || true
+            
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          # Add the synced siteini pack files to git
+          git add config/webgrabplus/siteini.pack/China/*
+          git add output/epg/custom_epg.xml || true
+          if ! git diff --staged --quiet; then
+            git commit -m "Update custom EPG and sync SiteIni Pack"
+            git push
+          fi
