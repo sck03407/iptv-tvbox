@@ -60,16 +60,9 @@ jobs:
         run: |
           python scripts/generate_epg_config.py
       - name: Run WebGrab+Plus
-        # Use linuxserver/webgrabplus docker image
-        # We mount config directory to /config and output to /data
-        # Note: We need to change ownership of output directory to allow writing
-        # Also need to move siteini files to where WG++ expects them or configure it
-        # WG++ usually looks in siteini.pack folder relative to executable or config
-        # Here we just copy them to root of config for simplicity if needed, 
-        # BUT since we used siteini.pack structure, let's see if WG++ picks it up.
-        # If not, we copy .ini files to root of /config (which is mapped to config/webgrabplus)
         run: |
           chmod -R 777 output
+          mkdir -p output/epg
           if ls config/webgrabplus/siteini.pack/China/*.ini 1> /dev/null 2>&1; then
             cp config/webgrabplus/siteini.pack/China/*.ini config/webgrabplus/
           fi
@@ -77,8 +70,8 @@ jobs:
           docker run --rm \
             -v ${{ github.workspace }}/config/webgrabplus:/config \
             -v ${{ github.workspace }}/output:/data \
-            linuxserver/webgrabplus:latest \
-            /bin/bash -c "cd /app/webgrabplus/bin && mono WebGrab+Plus.exe \"/config\"" || true
+            lscr.io/linuxserver/webgrabplus:latest \
+            /bin/bash -c "set -e; exe=$(find / -name \"WebGrab+Plus.exe\" -print -quit); if [ -z \"$exe\" ]; then echo \"WebGrab+Plus.exe not found\"; exit 1; fi; mono \"$exe\" \"/config\""
             
       - name: Commit and push if changed
         run: |
@@ -87,6 +80,7 @@ jobs:
           git config --global advice.addIgnoredFile false
           # Add the synced siteini pack files to git
           git add config/webgrabplus/siteini.pack/China/*
+          git add config/webgrabplus/WebGrab++.config.xml || true
           git add output/epg/custom_epg.xml || true
           if ! git diff --staged --quiet; then
             git commit -m "Update custom EPG and sync SiteIni Pack"

@@ -51,7 +51,7 @@ def main():
 """
     
     # Priority list of sources to look for
-    priority_sources = ["tv.cctv.com", "tv.mao.com", "tvsou.com"]
+    priority_sources = ["tv.cctv.com", "tv.cntv.cn", "tvsou.com"]
     
     added_xmltv_ids = set()
     channels_buffer = []
