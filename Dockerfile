@@ -8,9 +8,9 @@ WORKDIR $APP_WORKDIR
 
 COPY Pipfile* ./
 
-RUN apk update && apk add --no-cache gcc musl-dev python3-dev libffi-dev zlib-dev jpeg-dev wget make pcre-dev openssl-dev \
-  && pip install pipenv \
-  && PIPENV_VENV_IN_PROJECT=1 pipenv install --skip-lock
+RUN apk add --no-cache gcc musl-dev python3-dev libffi-dev zlib-dev jpeg-dev wget make pcre-dev openssl-dev \
+  && pip install --no-cache-dir pipenv \
+  && PIPENV_VENV_IN_PROJECT=1 pipenv install --skip-lock --clear
 
 RUN wget https://nginx.org/download/nginx-${NGINX_VER}.tar.gz && \
     tar xzf nginx-${NGINX_VER}.tar.gz
@@ -50,7 +50,7 @@ RUN mkdir -p /var/log/nginx && \
   ln -sf /dev/stdout /var/log/nginx/access.log && \
   ln -sf /dev/stderr /var/log/nginx/error.log
 
-RUN apk update && apk add --no-cache ffmpeg pcre
+RUN apk add --no-cache ffmpeg pcre
 
 EXPOSE $NGINX_HTTP_PORT
 
@@ -60,10 +60,8 @@ COPY config /iptv-api-config
 
 COPY nginx.conf.template /etc/nginx/nginx.conf.template
 
-RUN mkdir -p /usr/local/nginx/html
+RUN mkdir -p /usr/local/nginx/html && chmod +x /iptv-api-entrypoint.sh
 
 COPY stat.xsl /usr/local/nginx/html/stat.xsl
-
-RUN chmod +x /iptv-api-entrypoint.sh
 
 ENTRYPOINT /iptv-api-entrypoint.sh
