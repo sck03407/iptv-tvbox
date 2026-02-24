@@ -164,6 +164,28 @@ volumes:
 - `demo.txt`: 频道分类与排序模板
 - `subscribe.txt`: 直播订阅源列表
 - `blacklist.txt`: 黑名单
+- `channels.json`: 频道元数据配置（推荐）
+
+#### 💡 数据源分层管理 (最佳实践)
+
+为了更精细地管理频道，建议将“流链接”与“频道信息”分离：
+
+1.  **Streams (流链接)**: 在 `subscribe.txt` 中仅维护直播源链接，无需关心台标或 EPG ID。
+2.  **Channels (元数据)**: 在 `config/channels.json` 中统一配置频道的静态属性。
+
+**示例 `config/channels.json`**:
+```json
+{
+  "CCTV-1": {
+    "name": "CCTV-1 综合",
+    "logo": "https://live.fanmingming.com/tv/CCTV1.png",
+    "epg_id": "CCTV-1",
+    "group": "央视"
+  }
+}
+```
+
+系统生成 M3U 时，会自动根据频道名称匹配 `channels.json` 中的 Logo 和 EPG ID，实现一次配置、永久生效。
 
 ### 2. 参数调整 (`config/config.ini`)
 - `open_update`: 是否开启自动更新

@@ -23,6 +23,7 @@ import utils.constants as constants
 from utils.config import config, resource_path
 from utils.i18n import t
 from utils.types import ChannelData
+from utils.metadata import channel_metadata
 
 opencc_t2s = OpenCC("t2s")
 
@@ -432,9 +433,16 @@ def convert_to_m3u(path=None, first_channel_name=None, data=None):
                                           + ("+" if m.group(3) else ""),
                                 use_name,
                             )
-                        m3u_output += f'#EXTINF:-1 tvg-name="{processed_channel_name}" tvg-logo="{join_url(logo_url, f'{processed_channel_name}.{config.logo_type}')}"'
-                        if current_group:
-                            m3u_output += f' group-title="{current_group}"'
+                        
+                        # Metadata lookup
+                        metadata = channel_metadata.get(original_channel_name)
+                        logo = metadata.get("logo") if metadata and metadata.get("logo") else join_url(logo_url, f'{processed_channel_name}.{config.logo_type}')
+                        epg_id = metadata.get("epg_id") if metadata and metadata.get("epg_id") else processed_channel_name
+                        group = metadata.get("group") if metadata and metadata.get("group") else current_group
+                        
+                        m3u_output += f'#EXTINF:-1 tvg-id="{epg_id}" tvg-name="{processed_channel_name}" tvg-logo="{logo}"'
+                        if group:
+                            m3u_output += f' group-title="{group}"'
                         item_data = {}
                         if data:
                             item_list = data.get(original_channel_name, [])
