@@ -67,14 +67,27 @@ docker-compose up -d
 | **播放器 (前端)** | `http://localhost:3000` | `admin` / `admin` | 日常观影入口 |
 | **管理后台** | `http://localhost:51888` | 无需账号 | 数据接口与日志 |
 
-### 3. 存储建议（关键）
+### 3. 播放列表分类索引
+
+为了满足不同播放器和网络环境的需求，我们提供了多种格式的播放列表：
+
+| 格式 | 用途 | 访问地址 |
+| :--- | :--- | :--- |
+| **M3U (推荐)** | 适用于大多数现代播放器 (VLC, PotPlayer, Tivimate) | `http://localhost:51888/m3u` |
+| **TXT** | 适用于老式机顶盒或 DIY 播放器 | `http://localhost:51888/txt` |
+| **IPv6 专线** | 仅包含 IPv6 源 (适合校园网/移动宽带) | `http://localhost:51888/ipv6/m3u` |
+| **TVBox 点播** | 专为 TVBox 及其衍生版定制 | `http://localhost:51888/source.json` |
+
+> 💡 **提示**: 如果您开启了 RTMP 推流功能，请使用 `/hls/m3u` 获取低延迟流地址。
+
+### 4. 存储建议（关键）
 
 - **Kvrocks（推荐）**: 兼容 Redis 协议，持久化更稳，适合收藏与播放进度
 - **Redis（可用但有风险）**: 未开启持久化或内存淘汰时可能丢数据
 
 如需切换存储，仅需保证 MoonTVPlus 的 `NEXT_PUBLIC_STORAGE_TYPE` 与 `REDIS_URL` 指向对应实例即可。Kvrocks 与 Redis 通常可复用同一连接参数。
 
-### 4. Docker 部署数据库说明
+### 5. Docker 部署数据库说明
 
 - **默认行为**: `docker-compose.yml` 已包含 `moontv-redis` 容器并挂载 `moontv-data` 卷，实现基础持久化
 - **使用 Kvrocks**: 将 `moontv-redis` 替换为 Kvrocks 镜像，并将 `REDIS_URL` 指向 Kvrocks 容器
