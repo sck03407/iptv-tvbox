@@ -14,7 +14,6 @@ https://live.hacks.tools/tv/iptv6.txt
 https://live.hacks.tools/tv/iptv4.txt
 https://live.zbds.org/tv/iptv6.m3u
 https://live.zbds.org/tv/iptv4.m3u
-https://tv.iill.top/m3u/Gather
 https://raw.githubusercontent.com/mytv-android/iptv-api/master/output/result.txt
 https://raw.githubusercontent.com/YueChan/Live/refs/heads/main/IPTV.m3u
 https://raw.githubusercontent.com/hujingguang/ChinaIPTV/main/cnTV_AutoUpdate.m3u8
