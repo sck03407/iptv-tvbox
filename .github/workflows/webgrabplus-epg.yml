@@ -82,6 +82,7 @@ jobs:
           running=0
           tmp_dirs=()
           rm -rf config/webgrabplus/.chunk_*
+          chmod +x scripts/run_webgrab.sh
           for chunk_file in "${chunk_files[@]}"; do
             if [[ ! "$chunk_file" =~ \.([0-9]+)\.xml$ ]]; then
               continue
@@ -90,13 +91,14 @@ jobs:
             tmp_dir="config/webgrabplus/.chunk_${chunk_id}"
             rm -rf "$tmp_dir"
             mkdir -p "$tmp_dir"
-            rsync -a --exclude '.chunk_*' config/webgrabplus/ "$tmp_dir/"
-            cp "$chunk_file" "$tmp_dir/WebGrab++.config.xml"
+            rsync -a --exclude '.chunk_*' --exclude 'WebGrab++.config.*.xml' config/webgrabplus/ "$tmp_dir/"
+            cp "$chunk_file" "$tmp_dir/WebGrab++.config.0.xml"
             tmp_dirs+=("$tmp_dir")
 
             docker run --rm \
               --hostname webgrabplus \
               --cap-add=NET_ADMIN \
+              --cap-add=NET_RAW \
               --dns 223.5.5.5 \
               --dns 119.29.29.29 \
               -e WG_TIMEOUT_MINUTES=10 \
@@ -105,8 +107,9 @@ jobs:
               -e TZ=Asia/Shanghai \
               -v ${{ github.workspace }}/"$tmp_dir":/config \
               -v ${{ github.workspace }}/output:/data \
+              -v ${{ github.workspace }}/scripts/run_webgrab.sh:/run_webgrab.sh \
               lscr.io/linuxserver/webgrabplus:latest \
-              /app/dotnet/dotnet /app/wg++/bin.net/WebGrab+Plus.dll /config &
+              /bin/bash /run_webgrab.sh &
 
             running=$((running+1))
             if [ "$running" -ge "$PARALLEL" ]; then
