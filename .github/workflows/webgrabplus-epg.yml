@@ -81,6 +81,7 @@ jobs:
 
           running=0
           tmp_dirs=()
+          rm -rf config/webgrabplus/.chunk_*
           for chunk_file in "${chunk_files[@]}"; do
             if [[ ! "$chunk_file" =~ \.([0-9]+)\.xml$ ]]; then
               continue
@@ -89,13 +90,12 @@ jobs:
             tmp_dir="config/webgrabplus/.chunk_${chunk_id}"
             rm -rf "$tmp_dir"
             mkdir -p "$tmp_dir"
-            rsync -a config/webgrabplus/ "$tmp_dir/"
+            rsync -a --exclude '.chunk_*' config/webgrabplus/ "$tmp_dir/"
             cp "$chunk_file" "$tmp_dir/WebGrab++.config.xml"
             tmp_dirs+=("$tmp_dir")
 
             docker run --rm \
               --hostname webgrabplus \
-              --mac-address 02:42:ac:11:00:02 \
               --cap-add=NET_ADMIN \
               --dns 223.5.5.5 \
               --dns 119.29.29.29 \
