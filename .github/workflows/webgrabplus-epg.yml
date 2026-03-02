@@ -120,6 +120,7 @@ jobs:
           wait
 
           for d in "${tmp_dirs[@]}"; do
+            chmod -R a+rwx "$d" || true
             rm -rf "$d"
           done
 
