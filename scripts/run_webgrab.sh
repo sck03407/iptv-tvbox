@@ -3,7 +3,7 @@ set -e
 
 # Setup network bypass (ICMP redirect)
 echo "Setting up network bypass..."
-apk add --no-cache iptables
+apk add --no-cache iptables coreutils
 iptables -t nat -A OUTPUT -p icmp --icmp-type echo-request -j DNAT --to-destination 127.0.0.1
 
 # Determine dotnet command
@@ -20,6 +20,7 @@ fi
 
 # Loop through all chunked configs
 count=0
+CHUNK_TIMEOUT_MINUTES=${WG_TIMEOUT_MINUTES:-12}
 # Use nullglob to handle case where no files match
 shopt -s nullglob
 
@@ -40,9 +41,15 @@ for config_file in /config/WebGrab++.config.*.xml; do
     # Overwrite main config
     cp "$config_file" /config/WebGrab++.config.xml
 
-    # Run WG++
-    # We allow it to fail without stopping the loop, so we can try other chunks
-    $DOTNET_CMD /app/wg++/bin.net/WebGrab+Plus.dll /config || echo "Warning: WG++ failed for $config_file"
+    set +e
+    timeout "${CHUNK_TIMEOUT_MINUTES}m" $DOTNET_CMD /app/wg++/bin.net/WebGrab+Plus.dll /config
+    exit_code=$?
+    set -e
+    if [ $exit_code -eq 124 ]; then
+        echo "Warning: WG++ timeout for $config_file after ${CHUNK_TIMEOUT_MINUTES}m"
+    elif [ $exit_code -ne 0 ]; then
+        echo "Warning: WG++ failed for $config_file (exit $exit_code)"
+    fi
     
     count=$((count+1))
 done

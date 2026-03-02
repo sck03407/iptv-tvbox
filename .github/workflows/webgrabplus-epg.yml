@@ -15,7 +15,7 @@ concurrency:
 jobs:
   generate-epg:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
       - name: Sync with remote
@@ -58,6 +58,11 @@ jobs:
       
       - name: Generate WebGrab++.config.xml
         run: |
+          PARALLEL=${WG_PARALLEL:-3}
+          if [ -z "${WG_MAX_CHANNELS:-}" ]; then
+            WG_MAX_CHANNELS=$((6 * PARALLEL))
+          fi
+          export WG_MAX_CHANNELS
           python scripts/generate_epg_config.py
       - name: Run WebGrab+Plus (Optimized)
         run: |
@@ -66,26 +71,54 @@ jobs:
           if ls config/webgrabplus/siteini.pack/China/*.ini 1> /dev/null 2>&1; then
             cp config/webgrabplus/siteini.pack/China/*.ini config/webgrabplus/
           fi
-          
-          # Ensure execution script is executable
-          chmod +x scripts/run_webgrab.sh
-          
-          echo "Starting optimized WebGrab+Plus container..."
-          
-          docker run --rm \
-            --hostname webgrabplus \
-            --mac-address 02:42:ac:11:00:02 \
-            --cap-add=NET_ADMIN \
-            --dns 223.5.5.5 \
-            --dns 119.29.29.29 \
-            -e PUID=1000 \
-            -e PGID=1000 \
-            -e TZ=Asia/Shanghai \
-            -v ${{ github.workspace }}/config/webgrabplus:/config \
-            -v ${{ github.workspace }}/output:/data \
-            -v ${{ github.workspace }}/scripts/run_webgrab.sh:/run_webgrab.sh \
-            lscr.io/linuxserver/webgrabplus:latest \
-            /bin/bash /run_webgrab.sh
+
+          PARALLEL=${WG_PARALLEL:-3}
+          chunk_files=(config/webgrabplus/WebGrab++.config.*.xml)
+          if [ ${#chunk_files[@]} -eq 0 ]; then
+            echo "No chunk configs found"
+            exit 1
+          fi
+
+          running=0
+          tmp_dirs=()
+          for chunk_file in "${chunk_files[@]}"; do
+            if [[ ! "$chunk_file" =~ \.([0-9]+)\.xml$ ]]; then
+              continue
+            fi
+            chunk_id="${BASH_REMATCH[1]}"
+            tmp_dir="config/webgrabplus/.chunk_${chunk_id}"
+            rm -rf "$tmp_dir"
+            mkdir -p "$tmp_dir"
+            rsync -a config/webgrabplus/ "$tmp_dir/"
+            cp "$chunk_file" "$tmp_dir/WebGrab++.config.xml"
+            tmp_dirs+=("$tmp_dir")
+
+            docker run --rm \
+              --hostname webgrabplus \
+              --mac-address 02:42:ac:11:00:02 \
+              --cap-add=NET_ADMIN \
+              --dns 223.5.5.5 \
+              --dns 119.29.29.29 \
+              -e WG_TIMEOUT_MINUTES=10 \
+              -e PUID=1000 \
+              -e PGID=1000 \
+              -e TZ=Asia/Shanghai \
+              -v ${{ github.workspace }}/"$tmp_dir":/config \
+              -v ${{ github.workspace }}/output:/data \
+              lscr.io/linuxserver/webgrabplus:latest \
+              /app/dotnet/dotnet /app/wg++/bin.net/WebGrab+Plus.dll /config &
+
+            running=$((running+1))
+            if [ "$running" -ge "$PARALLEL" ]; then
+              wait -n
+              running=$((running-1))
+            fi
+          done
+          wait
+
+          for d in "${tmp_dirs[@]}"; do
+            rm -rf "$d"
+          done
 
       - name: Merge EPG Chunks
         run: |

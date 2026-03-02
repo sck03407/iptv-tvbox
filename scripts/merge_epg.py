@@ -1,6 +1,11 @@
 import os
 import glob
+import re
 from pathlib import Path
+
+CHANNEL_RE = re.compile(r'(<channel id=".*?">.*?</channel>)', re.DOTALL)
+PROGRAMME_RE = re.compile(r'(<programme start=".*?">.*?</programme>)', re.DOTALL)
+CHANNEL_ID_RE = re.compile(r'id="([^"]+)"')
 
 def main():
     epg_dir = Path("output/epg")
@@ -27,15 +32,11 @@ def main():
     for p_file in partial_files:
         content = p_file.read_text(encoding='utf-8', errors='ignore')
         
-        # Simple extraction to avoid XML parsing overhead/errors on large files
-        # Extract <channel>...</channel> blocks
-        import re
-        channels = re.findall(r'(<channel id=".*?">.*?</channel>)', content, re.DOTALL)
-        programmes = re.findall(r'(<programme start=".*?">.*?</programme>)', content, re.DOTALL)
+        channels = CHANNEL_RE.findall(content)
+        programmes = PROGRAMME_RE.findall(content)
         
         for ch in channels:
-            # Extract ID to avoid duplicates
-            id_match = re.search(r'id="([^"]+)"', ch)
+            id_match = CHANNEL_ID_RE.search(ch)
             if id_match:
                 ch_id = id_match.group(1)
                 if ch_id not in seen_channel_ids:

@@ -3,20 +3,22 @@ import glob
 import re
 from pathlib import Path
 
+CHANNEL_TAG_RE = re.compile(r'(<channel[^>]*>([^<]+)</channel>)')
+XMLTV_ID_RE = re.compile(r'xmltv_id="([^"]+)"')
+
 def parse_channels_xml(file_path):
     if not file_path.exists():
         return []
     
     content = file_path.read_text(encoding='utf-8', errors='ignore')
-    matches = re.finditer(r'(<channel[^>]*>([^<]+)</channel>)', content)
+    matches = CHANNEL_TAG_RE.finditer(content)
     
     found_channels = []
     for match in matches:
         full_tag = match.group(1)
         channel_name = match.group(2).strip()
         
-        # Extract xmltv_id
-        xmltv_id_match = re.search(r'xmltv_id="([^"]+)"', full_tag)
+        xmltv_id_match = XMLTV_ID_RE.search(full_tag)
         xmltv_id = xmltv_id_match.group(1) if xmltv_id_match else channel_name
         
         found_channels.append({
@@ -43,7 +45,7 @@ def main():
   <postprocess grab="y" run="n">rex</postprocess>
   <user-agent>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36</user-agent>
   <logging>on</logging>
-  <retry time-out="5">4</retry>
+  <retry time-out="2">2</retry>
   <timespan>8</timespan>
   <update>i</update>
 
@@ -80,7 +82,7 @@ def main():
                     added_xmltv_ids.add(ch['xmltv_id'])
 
     # 3. Chunk and Write Configs
-    MAX_CHANNELS = 18  # Safe limit under 20
+    MAX_CHANNELS = int(os.getenv("WG_MAX_CHANNELS", "18"))
     chunks = [channels_buffer[i:i + MAX_CHANNELS] for i in range(0, len(channels_buffer), MAX_CHANNELS)]
     
     if not chunks:
@@ -94,7 +96,7 @@ def main():
   <postprocess grab="y" run="n">rex</postprocess>
   <user-agent>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36</user-agent>
   <logging>on</logging>
-  <retry time-out="5">4</retry>
+  <retry time-out="2">2</retry>
   <timespan>8</timespan>
   <update>i</update>
 
@@ -115,7 +117,7 @@ def main():
   <postprocess grab="y" run="n">rex</postprocess>
   <user-agent>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36</user-agent>
   <logging>on</logging>
-  <retry time-out="5">4</retry>
+  <retry time-out="2">2</retry>
   <timespan>8</timespan>
   <update>i</update>
 
