@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <settings>
-  <filename>/data/epg/custom_epg.xml</filename>
+  <filename>/data/epg/custom_epg_full.xml</filename>
   <mode>v</mode>
   <postprocess grab="y" run="n">rex</postprocess>
   <user-agent>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36</user-agent>
   <logging>on</logging>
-  <retry time-out="5">4</retry>
+  <retry time-out="2">2</retry>
   <timespan>8</timespan>
   <update>i</update>
 
-  <!-- Auto-generated Channel List -->
+  <!-- Full Channel List (Reference) -->
   <channel update="i" site="tv.cctv.com" site_id="cctv-1" xmltv_id="cctv1">cctv1</channel>
   <channel update="i" site="tv.cctv.com" site_id="cctv-2" xmltv_id="cctv2">cctv2</channel>
   <channel update="i" site="tv.cctv.com" site_id="cctv-3" xmltv_id="cctv3">cctv3</channel>
