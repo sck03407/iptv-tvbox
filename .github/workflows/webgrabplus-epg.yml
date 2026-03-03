@@ -81,7 +81,7 @@ jobs:
 
           running=0
           tmp_dirs=()
-          rm -rf config/webgrabplus/.chunk_*
+          sudo rm -rf config/webgrabplus/.chunk_* || true
           chmod +x scripts/run_webgrab.sh
           for chunk_file in "${chunk_files[@]}"; do
             if [[ ! "$chunk_file" =~ \.([0-9]+)\.xml$ ]]; then
@@ -120,8 +120,7 @@ jobs:
           wait
 
           for d in "${tmp_dirs[@]}"; do
-            chmod -R a+rwx "$d" || true
-            rm -rf "$d"
+            sudo rm -rf "$d" || true
           done
 
       - name: Merge EPG Chunks
