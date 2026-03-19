@@ -1,91 +1,82 @@
 🕘️更新时间,#genre#
-2026-03-17 19:09:55,http://156.238.248.80:8880/play/1.m3u8
+2026-03-19 19:01:30,http://74.91.26.218:82/live/cctv1hd.m3u8
 
 📺央视频道,#genre#
-CCTV-1,http://156.238.248.80:8880/play/1.m3u8
-CCTV-1,http://107.150.60.122/live/cctv1hd.m3u8
 CCTV-1,http://74.91.26.218:82/live/cctv1hd.m3u8
 CCTV-1,http://38.75.136.137:98/gslb/dsdqbv/cctv1hd.m3u8?auth=test20251009
 CCTV-1,http://38.75.136.137:98/gslb/dsdqpub/cctv1hd.m3u8?auth=testpub
-CCTV-2,http://107.150.60.122/live/cctv2hd.m3u8
+CCTV-1,http://112.123.243.37:50085/tsfile/live/0001_1.m3u8
 CCTV-2,http://74.91.26.218:82/live/cctv2hd.m3u8
 CCTV-2,http://38.75.136.137:98/gslb/dsdqbv/cctv2hd.m3u8?auth=test20251009
 CCTV-2,http://38.75.136.137:98/gslb/dsdqpub/cctv2hd.m3u8?auth=testpub
-CCTV-3,http://156.238.248.80:8880/play/3.m3u8
-CCTV-3,http://107.150.60.122/live/cctv3hd.m3u8
+CCTV-2,http://112.123.243.37:50085/tsfile/live/0002_1.m3u8
 CCTV-3,http://74.91.26.218:82/live/cctv3hd.m3u8
 CCTV-3,http://38.75.136.137:98/gslb/dsdqbv/cctv3hd.m3u8?auth=test20251009
 CCTV-3,http://38.75.136.137:98/gslb/dsdqpub/cctv3hd.m3u8?auth=testpub
-CCTV-4,http://107.150.60.122/live/cctv4k.m3u8
+CCTV-3,http://112.123.243.37:50085/tsfile/live/0003_1.m3u8
 CCTV-4,http://74.91.26.218:82/live/cctv4hd.m3u8
-CCTV-4,http://38.75.136.137:98/gslb/dsdqbv/cctv4hd.m3u8?auth=test20251009
-CCTV-4,http://38.75.136.137:98/gslb/dsdqpub/cctv4k.m3u8?auth=testpub
-CCTV-4,http://38.75.136.137:98/gslb/dsdqpub/cctv4hd.m3u8?auth=testpub
+CCTV-4,https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4_mbd.m3u8?auth_key=1773924300-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-e712479cb2d48b3fe4f8f2acbfd03f20&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c
+CCTV-4,https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4_mbd.m3u8?auth_key=1773968400-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-472724616ba58cd8af15947037f6fa3e&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c
+CCTV-4,https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4k_mbd.m3u8?auth_key=1773968400-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-82eb2e4434e7eb1a03f6fdd37652f4f7&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c
+CCTV-4,https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4k_mbd.m3u8?auth_key=1773924300-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-f315f3706280d17fe2c3b79fa87c3194&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c
 CCTV-5,http://74.91.26.218:82/live/cctv5hd.m3u8
 CCTV-5,http://38.75.136.137:98/gslb/dsdqbv/cctv5hd.m3u8?auth=test20251009
 CCTV-5,http://38.75.136.137:98/gslb/dsdqpub/cctv5hd.m3u8?auth=testpub
 CCTV-5,http://38.75.136.137:98/gslb/dsdqpub/cctv5p.m3u8?auth=testpub
 CCTV-5,http://38.75.136.137:98/gslb/dsdqbv/cctv5p.m3u8?auth=test20251009
-CCTV-5+,http://107.150.60.122/live/cctv5p.m3u8
 CCTV-5+,http://74.91.26.218:82/live/cctv5p.m3u8
-CCTV-5+,http://223.112.114.228:50080/newlive/live/hls/180/live.m3u8
 CCTV-5+,http://38.75.136.137:98/gslb/dsdqbv/cctv5p.m3u8?auth=test20251009
-CCTV-6,http://156.238.248.80:8880/play/7.m3u8
-CCTV-6,http://107.150.60.122/live/cctv6hd.m3u8
+CCTV-5+,http://112.123.243.37:50085/tsfile/live/0006_1.m3u8
 CCTV-6,http://74.91.26.218:82/live/cctv6hd.m3u8
 CCTV-6,http://38.75.136.137:98/gslb/dsdqbv/cctv6hd.m3u8?auth=test20251009
 CCTV-6,http://38.75.136.137:98/gslb/dsdqpub/cctv6hd.m3u8?auth=testpub
-CCTV-7,http://107.150.60.122/live/cctv7hd.m3u8
+CCTV-6,http://218.17.33.178:53290/tsfile/live/1006_1.m3u8?key=txiptv
+CCTV-6,http://112.123.243.37:50085/tsfile/live/0007_1.m3u8
 CCTV-7,http://74.91.26.218:82/live/cctv7hd.m3u8
 CCTV-7,http://38.75.136.137:98/gslb/dsdqbv/cctv7hd.m3u8?auth=test20251009
 CCTV-7,http://38.75.136.137:98/gslb/dsdqpub/cctv7hd.m3u8?auth=testpub
-CCTV-8,http://156.238.248.80:8880/play/9.m3u8
-CCTV-8,http://107.150.60.122/live/cctv8hd.m3u8
-CCTV-8,http://107.150.60.122/live/cctv8k.m3u8
+CCTV-7,http://112.123.243.37:50085/tsfile/live/0008_1.m3u8
 CCTV-8,http://74.91.26.218:82/live/cctv8hd.m3u8
 CCTV-8,http://38.75.136.137:98/gslb/dsdqbv/cctv8hd.m3u8?auth=test20251009
-CCTV-9,http://107.150.60.122/live/cctv9hd.m3u8
+CCTV-8,http://38.75.136.137:98/gslb/dsdqpub/cctv8k.m3u8?auth=testpub
+CCTV-8,http://112.123.243.37:50085/tsfile/live/0009_1.m3u8
 CCTV-9,http://74.91.26.218:82/live/cctv9hd.m3u8
 CCTV-9,http://38.75.136.137:98/gslb/dsdqbv/cctv9hd.m3u8?auth=test20251009
 CCTV-9,http://38.75.136.137:98/gslb/dsdqpub/cctv9hd.m3u8?auth=testpub
-CCTV-10,http://156.238.248.80:8880/play/11.m3u8
-CCTV-10,http://107.150.60.122/live/cctv10hd.m3u8
+CCTV-9,http://112.123.243.37:50085/tsfile/live/0010_1.m3u8
 CCTV-10,http://74.91.26.218:82/live/cctv10hd.m3u8
 CCTV-10,http://38.75.136.137:98/gslb/dsdqbv/cctv10hd.m3u8?auth=test20251009
 CCTV-10,http://38.75.136.137:98/gslb/dsdqpub/cctv10hd.m3u8?auth=testpub
-CCTV-11,http://156.238.248.80:8880/play/12.m3u8
+CCTV-10,http://112.123.243.37:50085/tsfile/live/0011_1.m3u8
 CCTV-11,http://74.91.26.218:82/live/cctv11hd.m3u8
-CCTV-11,http://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL1.smil/chunklist_w744036192_b1000000.m3u8
 CCTV-11,http://38.75.136.137:98/gslb/dsdqbv/cctv11hd.m3u8?auth=test20251009
 CCTV-11,http://38.75.136.137:98/gslb/dsdqpub/cctv11hd.m3u8?auth=testpub
-CCTV-12,http://107.150.60.122/live/cctv12hd.m3u8
+CCTV-11,http://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL1.smil/chunklist_w744036192_b1000000.m3u8
+CCTV-11,http://112.123.243.37:50085/tsfile/live/0012_1.m3u8
 CCTV-12,http://38.75.136.137:98/gslb/dsdqbv/cctv12hd.m3u8?auth=test20251009
 CCTV-12,http://38.75.136.137:98/gslb/dsdqpub/cctv12hd.m3u8?auth=testpub
-CCTV-13,http://107.150.60.122/live/cctv13hd.m3u8
+CCTV-12,http://112.123.243.37:50085/tsfile/live/0013_1.m3u8
 CCTV-13,http://74.91.26.218:82/live/cctv13hd.m3u8
 CCTV-13,http://38.75.136.137:98/gslb/dsdqbv/cctv13hd.m3u8?auth=test20251009
-CCTV-14,http://156.238.248.80:8880/play/15.m3u8
-CCTV-14,http://107.150.60.122/live/cctv14hd.m3u8
+CCTV-13,http://38.75.136.137:98/gslb/dsdqpub/cctv13hd.m3u8?auth=testpub
+CCTV-13,http://112.123.243.37:50085/tsfile/live/0014_1.m3u8
 CCTV-14,http://74.91.26.218:82/live/cctv14hd.m3u8
 CCTV-14,http://38.75.136.137:98/gslb/dsdqbv/cctv14hd.m3u8?auth=test20251009
 CCTV-14,http://38.75.136.137:98/gslb/dsdqpub/cctv14hd.m3u8?auth=testpub
-CCTV-15,http://156.238.248.80:8880/play/16.m3u8
-CCTV-15,http://107.150.60.122/live/cctv15hd.m3u8
+CCTV-14,http://112.123.243.37:50085/tsfile/live/0015_1.m3u8
 CCTV-15,http://74.91.26.218:82/live/cctv15hd.m3u8
 CCTV-15,http://38.75.136.137:98/gslb/dsdqbv/cctv15hd.m3u8?auth=test20251009
 CCTV-15,http://38.75.136.137:98/gslb/dsdqpub/cctv15hd.m3u8?auth=testpub
-CCTV-16,http://107.150.60.122/live/cctv16hd.m3u8
+CCTV-15,http://38.75.136.137:98/gslb/dsdqca/cctv15hd.m3u8?auth=test20251009
+CCTV-15,http://112.123.243.37:50085/tsfile/live/0016_1.m3u8
 CCTV-16,http://74.91.26.218:82/live/cctv16hd.m3u8
 CCTV-16,http://38.75.136.137:98/gslb/dsdqbv/cctv16hd.m3u8?auth=test20251009
 CCTV-16,http://38.75.136.137:98/gslb/dsdqpub/cctv16hd.m3u8?auth=testpub
-CCTV-17,http://156.238.248.80:8880/play/17.m3u8
-CCTV-17,http://107.150.60.122/live/cctv17hd.m3u8
 CCTV-17,http://74.91.26.218:82/live/cctv17hd.m3u8
 CCTV-17,http://38.75.136.137:98/gslb/dsdqbv/cctv17hd.m3u8?auth=test20251009
 CCTV-17,http://38.75.136.137:98/gslb/dsdqpub/cctv17hd.m3u8?auth=testpub
 
 💰央视付费频道,#genre#
-文化精品,http://107.150.60.122/live/ysjp.m3u8
 文化精品,http://38.75.136.137:98/gslb/dsdqpub/ysjp.m3u8?auth=testpub
 央视台球,http://38.75.136.137:98/gslb/dsdqpub/ystq.m3u8?auth=testpub
 风云音乐,http://38.75.136.137:98/gslb/dsdqpub/fyyy.m3u8?auth=testpub
@@ -104,69 +95,82 @@ CCTV-17,http://38.75.136.137:98/gslb/dsdqpub/cctv17hd.m3u8?auth=testpub
 
 📡卫视频道,#genre#
 广东卫视,https://txmov2.a.kwimgs.com/upic/2023/01/26/09/BMjAyMzAxMjYwOTE3NDVfNzM5MzQzNzIyXzk0NjI1OTUwNTA3XzBfMw==_b_B81ddda927d33445d544befd008e60109.mp4
-广东卫视,http://107.150.60.122/live/gdwshd.m3u8
 广东卫视,http://38.75.136.137:98/gslb/dsdqpub/gdwshd.m3u8?auth=testpub
-浙江卫视,http://107.150.60.122/live/zjwshd.m3u8
+广东卫视,http://112.123.243.37:50085/tsfile/live/0135_1.m3u8
 浙江卫视,http://38.75.136.137:98/gslb/dsdqpub/zjwshd.m3u8?auth=testpub
+浙江卫视,https://play-qukan.cztv.com/live/1746687519046362.m3u8
+浙江卫视,http://112.123.243.37:50085/tsfile/live/0019_1.m3u8
 湖南卫视,https://txmov2.a.kwimgs.com/bs3/video-hls/5199687338554291078_hlsb.m3u8
-湖南卫视,http://107.150.60.122/live/hnwshd.m3u8
 湖南卫视,http://74.91.26.218:82/live/hnwshd.m3u8
 湖南卫视,http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/Y2RuZXhfaWQ9YWxfaGxzX2xkdnQmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST.m3u8
 湖南卫视,http://hlsal-ldvt.qing.mgtv.com/nn_live/nn_x64/dWlwPTEyNy4wLjAuMSZ1aWQ9cWluZy1jbXMmbm5fdGltZXpvbmU9OCZjZG5leF9pZD1hbF9obHNfbGR2dCZ1dWlkPTliODY4NmU5ZTM2YzYwMmMmZT02OTE0NjA0JnY9MSZpZD1ITldTWkdTVCZzPTcwN2RiYTc2YzJjNmJmMTQ4MmUyZGYzOWU2NWM3YWFi/HNWSZGST.m3u8
-北京卫视,http://156.238.248.80:8880/play/28.m3u8
+湖南卫视,http://38.75.136.137:98/gslb/dsdqpub/hnwshd.m3u8?auth=testpub
 北京卫视,http://38.75.136.137:98/gslb/dsdqpub/bjwshd.m3u8?auth=testpub
 北京卫视,http://38.75.136.137:98/gslb/dsdqbv/bjwshd.m3u8?auth=test20251009
-湖北卫视,http://156.238.248.80:8880/play/33.m3u8
-湖北卫视,http://107.150.60.122/live/hbwshd.m3u8
+北京卫视,http://112.123.243.37:50085/tsfile/live/0127_1.m3u8
 湖北卫视,http://38.75.136.137:98/gslb/dsdqpub/hbwshd.m3u8?auth=testpub
+湖北卫视,http://112.123.243.37:50085/tsfile/live/1001_1.m3u8
 黑龙江卫视,http://38.75.136.137:98/gslb/dsdqpub/hljwshd.m3u8?auth=testpub
+黑龙江卫视,http://112.123.243.37:50085/tsfile/live/0142_1.m3u8
 安徽卫视,http://38.75.136.137:98/gslb/dsdqpub/ahwshd.m3u8?auth=testpub
-重庆卫视,http://107.150.60.122/live/cqwshd.m3u8
+安徽卫视,http://112.123.243.37:50085/tsfile/live/0130_1.m3u8
 重庆卫视,http://38.75.136.137:98/gslb/dsdqpub/cqwshd.m3u8?auth=testpub
+重庆卫视,http://112.123.243.37:50085/tsfile/live/0131_1.m3u8
 东方卫视,https://txmov2.a.kwimgs.com/bs3/video-hls/5219953535631090825_hlsb.m3u8
-东方卫视,http://156.238.248.80:8880/play/25.m3u8
-东方卫视,http://bp-resource-dfl.bestv.cn/155/3/video.m3u8
-东方卫视,http://107.150.60.122/live/dfwshd.m3u8
 东方卫视,http://38.75.136.137:98/gslb/dsdqbv/dfwshd.m3u8?auth=test20251009
-东南卫视,http://107.150.60.122/live/dnwshd.m3u8
-东南卫视,https://live1-fuyun.fjtv.net/dnpd/hd/live.m3u8?_upt=4bbe9f1a1773748377
+东方卫视,http://38.75.136.137:98/gslb/dsdqpub/dfwshd.m3u8?auth=testpub
+东方卫视,http://112.123.243.37:50085/tsfile/live/0124_1.m3u8?key=txiptv&playlive=0&authid=0
 东南卫视,http://38.75.136.137:98/gslb/dsdqpub/dnwshd.m3u8?auth=testpub
+东南卫视,http://112.123.243.37:50085/tsfile/live/0113_1.m3u8
 甘肃卫视,http://38.75.136.137:98/gslb/dsdqpub/gswshd.m3u8?auth=testpub
-广西卫视,http://107.150.60.122/live/gxwshd.m3u8
+甘肃卫视,http://112.123.243.37:50085/tsfile/live/0123_1.m3u8
 广西卫视,http://38.75.136.137:98/gslb/dsdqpub/gxwshd.m3u8?auth=testpub
+广西卫视,http://112.123.243.37:50085/tsfile/live/0137_1.m3u8
 贵州卫视,http://38.75.136.137:98/gslb/dsdqpub/gzwshd.m3u8?auth=testpub
+贵州卫视,http://112.123.243.37:50085/tsfile/live/0130_2.m3u8
 河北卫视,http://38.75.136.137:98/gslb/dsdqpub/hewshd.m3u8?auth=testpub
+河北卫视,http://112.123.243.37:50085/tsfile/live/0018_1.m3u8
 河南卫视,http://1.94.31.214/php/hntv.php?id=hnws
 河南卫视,http://38.75.136.137:98/gslb/dsdqpub/hawshd.m3u8?auth=testpub
+河南卫视,http://112.123.243.37:50085/tsfile/live/0121_1.m3u8
 吉林卫视,http://38.75.136.137:98/gslb/dsdqpub/jlwshd.m3u8?auth=testpub
-吉林卫视,https://hls.avap.jilintv.cn/zqvk7vpj/channel/0533b55e42354f4f802bdec78e26b571/index.m3u8?txSecret=52c70f4abbdc9d3badc9c4114c1e1772&txTime=69B96859
-江苏卫视,http://156.238.248.80:8880/play/26.m3u8
-江苏卫视,http://107.150.60.122/live/jswshd.m3u8
+吉林卫视,https://hls.avap.jilintv.cn/zqvk7vpj/channel/0533b55e42354f4f802bdec78e26b571/index.m3u8?txSecret=79299ae743b98f1ed7a243dbeb2573de&txTime=69BBEF3A
+吉林卫视,http://112.123.243.37:50085/tsfile/live/0116_1.m3u8
 江苏卫视,http://38.75.136.137:98/gslb/dsdqbv/jswshd.m3u8?auth=test20251009
 江苏卫视,http://38.75.136.137:98/gslb/dsdqpub/jswshd.m3u8?auth=testpub
+江苏卫视,http://112.123.243.37:50085/tsfile/live/0017_1.m3u8
 江西卫视,http://38.75.136.137:98/gslb/dsdqpub/jxwshd.m3u8?auth=testpub
-辽宁卫视,http://156.238.248.80:8880/play/29.m3u8
-辽宁卫视,http://107.150.60.122/live/lnwshd.m3u8
+江西卫视,http://112.123.243.37:50085/tsfile/live/0132_1.m3u8
 辽宁卫视,http://38.75.136.137:98/gslb/dsdqpub/lnwshd.m3u8?auth=testpub
-内蒙古卫视,http://38.75.136.137:98/gslb/dsdqpub/nmgws.m3u8?auth=testpub
+辽宁卫视,http://112.123.243.37:50085/tsfile/live/0126_1.m3u8
+内蒙古卫视,http://218.17.33.178:53290/tsfile/live/0109_1.m3u8?key=txiptv
+内蒙古卫视,http://112.123.243.37:50085/tsfile/live/0118_1.m3u8
 宁夏卫视,http://38.75.136.137:98/gslb/dsdqpub/nxws.m3u8?auth=testpub
-青海卫视,http://107.150.60.122/live/qhws.m3u8
+宁夏卫视,http://112.123.243.37:50085/tsfile/live/0125_1.m3u8
 青海卫视,http://38.75.136.137:98/gslb/dsdqpub/qhws.m3u8?auth=testpub
 山东卫视,http://38.75.136.137:98/gslb/dsdqpub/sdwshd.m3u8?auth=testpub
-陕西卫视,http://156.238.248.80:8880/play/32.m3u8
-陕西卫视,http://107.150.60.122/live/snwshd.m3u8
+山东卫视,http://112.123.243.37:50085/tsfile/live/0122_1.m3u8?key=txiptv&playlive=0&authid=0
+山东卫视,http://112.123.243.37:50085/tsfile/live/0122_1.m3u8
+山西卫视,http://112.123.243.37:50085/tsfile/live/0120_1.m3u8
 陕西卫视,http://38.75.136.137:98/gslb/dsdqpub/sxwshd.m3u8?auth=testpub
 陕西卫视,http://38.75.136.137:98/gslb/dsdqpub/snwshd.m3u8?auth=testpub
+陕西卫视,http://112.123.243.37:50085/tsfile/live/0109_1.m3u8
 四川卫视,http://38.75.136.137:98/gslb/dsdqpub/scwshd.m3u8?auth=testpub
-深圳卫视,http://107.150.60.122/live/szwshd.m3u8
+四川卫视,http://218.17.33.178:53290/tsfile/live/0123_1.m3u8?key=txiptv
+四川卫视,http://112.123.243.37:50085/tsfile/live/0139_1.m3u8
 深圳卫视,http://38.75.136.137:98/gslb/dsdqpub/szwshd.m3u8?auth=testpub
 深圳卫视,http://38.64.72.148:80/hls/modn/list/4007/playlist.m3u8
+深圳卫视,http://112.123.243.37:50085/tsfile/live/1000_1.m3u8?key=txiptv&playlive=0&authid=0
+深圳卫视,http://112.123.243.37:50085/tsfile/live/1000_1.m3u8
 三沙卫视,http://38.75.136.137:98/gslb/dsdqpub/ssws.m3u8?auth=testpub
-天津卫视,http://107.150.60.122/live/tjwshd.m3u8
 天津卫视,http://38.75.136.137:98/gslb/dsdqpub/tjwshd.m3u8?auth=testpub
-西藏卫视,http://107.150.60.122/live/xzws.m3u8
+天津卫视,http://112.123.243.37:50085/tsfile/live/0128_1.m3u8
+西藏卫视,http://112.123.243.37:50085/tsfile/live/0141_1.m3u8
 新疆卫视,http://38.75.136.137:98/gslb/dsdqpub/xjws.m3u8?auth=testpub
+新疆卫视,http://218.17.33.178:53290/tsfile/live/0110_1.m3u8?key=txiptv
+新疆卫视,http://112.123.243.37:50085/tsfile/live/0143_1.m3u8
 云南卫视,http://38.75.136.137:98/gslb/dsdqpub/ynwshd.m3u8?auth=testpub
+云南卫视,http://112.123.243.37:50085/tsfile/live/0117_1.m3u8
 
 ☘️广东频道,#genre#
 广东珠江,http://38.75.136.137:98/gslb/dsdqpub/gdzj.m3u8?auth=testpub
@@ -175,17 +179,25 @@ CCTV-17,http://38.75.136.137:98/gslb/dsdqpub/cctv17hd.m3u8?auth=testpub
 广东体育,http://38.75.136.137:98/gslb/dsdqpub/gdty.m3u8?auth=testpub
 广东新闻,http://38.75.136.137:98/gslb/dsdqpub/gdxw.m3u8?auth=testpub
 广东卫视,https://txmov2.a.kwimgs.com/upic/2023/01/26/09/BMjAyMzAxMjYwOTE3NDVfNzM5MzQzNzIyXzk0NjI1OTUwNTA3XzBfMw==_b_B81ddda927d33445d544befd008e60109.mp4
-广东卫视,http://107.150.60.122/live/gdwshd.m3u8
 广东卫视,http://38.75.136.137:98/gslb/dsdqpub/gdwshd.m3u8?auth=testpub
+广东卫视,http://112.123.243.37:50085/tsfile/live/0135_1.m3u8
 大湾区卫视,http://38.64.72.148/hls/modn/list/4011/chunklist0.m3u8
-深圳卫视,http://107.150.60.122/live/szwshd.m3u8
+广州综合,http://tp88.cn/IPTV/guangdong/gztv.php?id=zhonghe
+广州综合,https://tencentplay.gztv.com/live/zonghes.m3u8?txSecret=e381ab098841a0badbf7e11f24143cf7&txTime=18e6ff43701
+广州综合,https://tencentplay.gztv.com/live/zonghes.m3u8?txSecret=439b0fd2cf766b363c93a59cbcbe1370&txTime=18d00acf488
+广州综合,https://tencentplay.gztv.com/live/zonghes.m3u8?txSecret=f0147ae6453a80f5989f382368b72aad&txTime=18d00acf487
+广州竞赛,https://tencentplay.gztv.com/live/jingsai.m3u8?txSecret=a4d04c27d0d1d8b7efef2ed7ff1c3eae&txTime=191b60cc9ca
+广州竞赛,https://tencentplay.gztv.com/live/jingsai.m3u8?txSecret=49c8041461997c7a97dbcc3c7fd11b4f&txTime=18d00acf487
 深圳卫视,http://38.75.136.137:98/gslb/dsdqpub/szwshd.m3u8?auth=testpub
 深圳卫视,http://38.64.72.148:80/hls/modn/list/4007/playlist.m3u8
+深圳卫视,http://112.123.243.37:50085/tsfile/live/1000_1.m3u8?key=txiptv&playlive=0&authid=0
+深圳卫视,http://112.123.243.37:50085/tsfile/live/1000_1.m3u8
 
 ☘️浙江频道,#genre#
-海宁新闻综合,http://p2hs.vzan.com/slowlive/317913155078575177/live.m3u8
-海宁新闻综合,https://p2hs.vzan.com/slowlive/317913155078575177/live.m3u8?zbid=293304&tpid=1708007815
+嘉兴新闻综合,http://tvfile.jyrmt.cn:80/nmip-media/channellive/channel104452/playlist.m3u8
 海宁新闻综合,https://p2hs.vzan.com/slowlive/317913155078575177/live.m3u8
+海宁新闻综合,https://p2hs.vzan.com/slowlive/317913155078575177/live.m3u8?zbid=293304&tpid=1708007815
+海宁新闻综合,http://p2hs.vzan.com/slowlive/317913155078575177/live.m3u8
 
 ☘️北京频道,#genre#
 北京科教,http://player.cntv.cn/standard/live_HLSDRM20180606.swf?ChannelID=btv3&P2PChannelID=pd://cctv_p2p_hdbtv3
@@ -195,9 +207,8 @@ CCTV-17,http://38.75.136.137:98/gslb/dsdqpub/cctv17hd.m3u8?auth=testpub
 东方影视,http://8.218.84.3:8885/live/LxWcScuQ6WphaELY4DhkKm8SIv7_ZgNIJtNvFurqphvyqxUIU84OjKVCwFxMq9iUXmgja0KUV35m3EM_O16Gde2BhOOVwBX5nWcp--3pw2_IWmxZOH5C2dWl247XqcwyI3vrPz5RddMEGLNsntwyHo8dRlM-KnZdXdRvbr5vF39JPtesD6dxoiQagb3PF8dZGuekzoallBnndRLYe1_5CaBMelexrOZ2-ZfZhZTsoH7hSW8uoTROVBG7GBr9zNP0I8tUsHbfXsMHoihIoIlRJQ.m3u8?u=1756878715
 东方影视,http://8.218.84.3:8885/live/NlAhgdR475_p9pHeKE1G1rILoVl18Qqe36jUsiWqY5S26LQzNA-82o0LSiNo13OGDtLPqM_MFsjBEgVJlyqTy4iK7Xf5h2nfmRi3Y2u23LZviUKjk68F395Bm8l9ceS4I8bf3T9j0L-eQTFgDp-gPTsdalWG1dAxMxRipqaHfdIpZZtUaVSGCnqAwrtRYicT5bgGmd-6GA6COtOtBYxMt8Txmvl-pvVaJ2zglEjl9VjMdUjMIHlGx80zLt2920ucSehuKxXhzfQNRwz2w1iJAg.m3u8?u=1757123819
 新闻综合,http://p2.vzan.com/slowlive/596867413819827251/live.m3u8
-新闻综合,https://live-auth.51kandianshi.com/szgd/csztv1.m3u8
 新闻综合,https://qcfile.qcrmt.com/nmip-media/channellive/channel100933/playlist.m3u8
-新闻综合,https://m3u8channel.yunxya.com/nmip-media/channellive/channel100028/playlist.m3u8
+新闻综合,https://live-auth.51kandianshi.com/szgd/csztv1.m3u8
 欢笑剧场,http://38.75.136.137:98/gslb/dsdqpub/hxjchd.m3u8?auth=testpub
 生活时尚,http://8.218.84.3:8885/live/NlAhgdR475_p9pHeKE1G1rILoVl18Qqe36jUsiWqY5S26LQzNA-82o0LSiNo13OGv6JZQFaCoLKvAXAwqvyCMFxFz3MePmg1geZw74JSom3rn9fKh5ShDeNw3XMO0FTEzCpsHL8YjEsw2vYwlFudCDNPUm3lQvpd9ejH2L_6nSW4lsbr9JaMeZgL5zYqDLzQgO2MqKWkfpaxNPEEb7NiZlxF6wsiSEyD62S5y52WoJBVXAPKGfbgo92BM5R1V6XvUUyzdc85Ncy0hfc6l6IX2Q.m3u8?u=1757123819
 
@@ -215,10 +226,10 @@ CCTV-17,http://38.75.136.137:98/gslb/dsdqpub/cctv17hd.m3u8?auth=testpub
 苏州生活资讯,https://live-auth.51kandianshi.com/szgd/csztv5.m3u8
 苏州社会经济,https://live-auth.51kandianshi.com/szgd/csztv2.m3u8
 镇江二套社会民生,http://zjtv-wshls.homecdn.com/live/2aa16.m3u8
-镇江新闻综合,http://zjtv-wshls.homecdn.com/live/2aa50.m3u8
-镇江新闻综合,http://zjtv-wshls.homecdn.com/live/2aa50.m3u8?wsSession=a263bdc5a26cd01b57a80359-170493712215358&wsIPSercert=f56bd6194d219a5172dbed60eca6e9b0
-镇江新闻综合,http://zjtv-wshls.homecdn.com/live/2aa50.m3u8?wsSession=a263bdc5a26cd01b57a80359-170493712215358
 镇江新闻综合,http://cm-wshls.homecdn.com/live/2aa50.m3u8
+镇江新闻综合,http://zjtv-wshls.homecdn.com/live/2aa50.m3u8?wsSession=a263bdc5a26cd01b57a80359-170493712215358&wsIPSercert=f56bd6194d219a5172dbed60eca6e9b0
+镇江新闻综合,http://zjtv-wshls.homecdn.com/live/2aa50.m3u8
+镇江新闻综合,http://zjtv-wshls.homecdn.com/live/2aa50.m3u8?wsSession=a263bdc5a26cd01b57a80359-170493712215358
 
 ☘️辽宁频道,#genre#
 
@@ -234,22 +245,24 @@ CCTV-17,http://38.75.136.137:98/gslb/dsdqpub/cctv17hd.m3u8?auth=testpub
 
 ☘️天津频道,#genre#
 津南一套,http://play.jinnantv.top/live/JNTV1.m3u8?ztianjd
-武清综合,https://tvpull.smartwq.cn/wqlive/convergencemedia/playlist.m3u8?ztianjd
-天津卫视,http://107.150.60.122/live/tjwshd.m3u8
 天津卫视,http://38.75.136.137:98/gslb/dsdqpub/tjwshd.m3u8?auth=testpub
+天津卫视,http://112.123.243.37:50085/tsfile/live/0128_1.m3u8
 
 ☘️四川频道,#genre#
-乐至综合,http://175.155.106.72:89/live1/live1.m3u8
 乐至综合,http://175.155.106.72:89/live1/live1.m3u8?zsicd;http://rmlive.lzxrmtzx.com/live1/live1.m3u8?zsicd
 乐至综合,http://175.155.106.72:89/live1/live1.m3u8?zsicd
-凉山新闻综合,http://file.yizu.tv/nmip-media/channellive/channel106606/playlist.m3u8
+乐至综合,http://175.155.106.72:89/live1/live1.m3u8
+井研综合,http://tvfile.jyrmt.cn/nmip-media/channellive/channel104452/playlist.m3u8
 叙州新闻综合,http://pili-live-hls.ybcxjd.com/jdh-live/2108111201035597.m3u8?zsicd
+四川科教,http://182.150.115.21:8030/pcgacg/pcgacg_0.m3u8
 雅安新闻综合,https://play.yunxya.com/channellive/xinwen.m3u8
 青川综合,http://qcfile.qcrmt.com/nmip-media/channellive/channel100933/playlist.m3u8
 
 ☘️陕西频道,#genre#
 
 ☘️福建频道,#genre#
+厦门卫视,http://38.75.136.137:98/gslb/dsdqpub/xmws.m3u8?auth=testpub
+厦门卫视,http://112.123.243.37:50085/tsfile/live/0136_1.m3u8
 
 ☘️海南频道,#genre#
 
@@ -268,9 +281,10 @@ CCTV-17,http://38.75.136.137:98/gslb/dsdqpub/cctv17hd.m3u8?auth=testpub
 
 ☘️新疆频道,#genre#
 新疆卫视,http://38.75.136.137:98/gslb/dsdqpub/xjws.m3u8?auth=testpub
+新疆卫视,http://218.17.33.178:53290/tsfile/live/0110_1.m3u8?key=txiptv
+新疆卫视,http://112.123.243.37:50085/tsfile/live/0143_1.m3u8
 
 ☘️山东频道,#genre#
-山东教育,https://test1.live.sdetv.com.cn/live/dianshizhibo/playlist.m3u8
 
 ☘️山西频道,#genre#
 太谷新闻综合,https://p2.vzan.com/slowlive/596867413819827251/live.m3u8?zbid=1725814272&tpid=1516989100&type=0
@@ -281,7 +295,6 @@ CCTV-17,http://38.75.136.137:98/gslb/dsdqpub/cctv17hd.m3u8?auth=testpub
 黎城综合,http://111.53.96.67:8081/live/1/index.m3u8?%E5%85%B3%E6%B3%A8%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7[%E6%99%B4%E5%9B%AD]
 
 ☘️安徽频道,#genre#
-安徽导视,http://dspdhls.appcoo.com:8888/live/dspd/index.m3u8
 广德生活,https://live.gdtv.ah.cn/live/newsTV.m3u8
 
 ☘️宁夏频道,#genre#
@@ -293,6 +306,9 @@ CCTV-17,http://38.75.136.137:98/gslb/dsdqpub/cctv17hd.m3u8?auth=testpub
 ☘️内蒙古频道,#genre#
 
 ☘️云南频道,#genre#
+易门综合,https://zb-live.ynurl.com/yimen/3b75a2f9-7941-46b7-992d-a9796fbca5fe.m3u8
+通海电视台,https://zb-live.ynurl.com/tonghai/3bfe3a9e-48e6-4c1e-8770-1df66447cc6c.m3u8
+陇川综合,https://zb-live.ynurl.com/longchuan/58f88df3-605e-4c57-865c-8e8f85241ca1.m3u8
 
 ☘️青海频道,#genre#
 西宁新闻综合,http://cm-wshls.homecdn.com/live/5a296.dlv
@@ -317,9 +333,7 @@ TVBS亚洲,http://38.64.72.148/hls/modn/list/4005/chunklist1.m3u8
 东森超视,http://38.64.72.148:80/hls/modn/list/2013/chunklist1.m3u8
 
 🎬电影频道,#genre#
-CHC家庭影院,http://156.238.248.80:8880/play/59.m3u8
 CHC家庭影院,http://38.75.136.137:98/gslb/dsdqpub/chcjt.m3u8?auth=testpub
-CHC动作电影,http://156.238.248.80:8880/play/58.m3u8
 CHC动作电影,http://38.75.136.137:98/gslb/dsdqpub/chcdz.m3u8?auth=testpub
 纬来电影,http://iptv.4666888.xyz/iptv2A.php?id=54
 天映经典,http://74.91.26.218:82/live/tyjd.m3u8
@@ -335,14 +349,15 @@ CCTV-5,http://38.75.136.137:98/gslb/dsdqbv/cctv5hd.m3u8?auth=test20251009
 CCTV-5,http://38.75.136.137:98/gslb/dsdqpub/cctv5hd.m3u8?auth=testpub
 CCTV-5,http://38.75.136.137:98/gslb/dsdqpub/cctv5p.m3u8?auth=testpub
 CCTV-5,http://38.75.136.137:98/gslb/dsdqbv/cctv5p.m3u8?auth=test20251009
-CCTV-5+,http://107.150.60.122/live/cctv5p.m3u8
 CCTV-5+,http://74.91.26.218:82/live/cctv5p.m3u8
-CCTV-5+,http://223.112.114.228:50080/newlive/live/hls/180/live.m3u8
 CCTV-5+,http://38.75.136.137:98/gslb/dsdqbv/cctv5p.m3u8?auth=test20251009
+CCTV-5+,http://112.123.243.37:50085/tsfile/live/0006_1.m3u8
 广东体育,http://74.91.26.218:82/live/gdty.m3u8
 广东体育,http://38.75.136.137:98/gslb/dsdqpub/gdty.m3u8?auth=testpub
 纬来体育,http://zb.xmzb.xyz/123.php?id=⚽马上oppppp一纬来体育
 劲爆体育,http://8.218.84.3:8885/live/NlAhgdR475_p9pHeKE1G1rILoVl18Qqe36jUsiWqY5S26LQzNA-82o0LSiNo13OG0TjnHint92FaGOdQKWbGgIqMxjYHJKfKmz5-sDiesmTbAxE-GePCEhWtmcc34I1qpRF-7LjmYkvzb6Z031xjMJ9oqMvNwqQk-mVldD0G6Jso-oleU3z0vdP5jZk5oHwysitVUXSTbua0xNvBg3gp7kGtcMQsyg_Kg-hfWgLQr5eOhIy4zHbYYag-td6NcatUaPE49DgqVaZv5CGKGGVfVg.m3u8?u=1757123819
+广州竞赛,https://tencentplay.gztv.com/live/jingsai.m3u8?txSecret=a4d04c27d0d1d8b7efef2ed7ff1c3eae&txTime=191b60cc9ca
+广州竞赛,https://tencentplay.gztv.com/live/jingsai.m3u8?txSecret=49c8041461997c7a97dbcc3c7fd11b4f&txTime=18d00acf487
 风云足球,http://8.218.84.3:8885/live/NlAhgdR475_p9pHeKE1G1rILoVl18Qqe36jUsiWqY5S26LQzNA-82o0LSiNo13OGfqrKp1pb9Avavqe9Gh3Dcb62y6honWAM-APBya29-k2C5G7obASCmOc9MAWffM2sf1Fxfe3QUmPiBgHfmjUYgbpkEenn9J69jsSBy7UT68wf6BbtyAwTJn7flu4fJmY_TRndiK7YE1ARFCg2PC0-ArGv4gRidE0FYBXDiKtgb0foN026JN5RIuXCxPl80uxDaVCFKqSvOgpShdJKLYP9FQ.m3u8?u=1757123819
 风云足球,http://38.75.136.137:98/gslb/dsdqpub/fyzq.m3u8?auth=testpub
 
@@ -353,13 +368,12 @@ CCTV-5+,http://38.75.136.137:98/gslb/dsdqbv/cctv5p.m3u8?auth=test20251009
 🎮游戏频道,#genre#
 
 🎵音乐频道,#genre#
-CCTV-15,http://156.238.248.80:8880/play/16.m3u8
-CCTV-15,http://107.150.60.122/live/cctv15hd.m3u8
 CCTV-15,http://74.91.26.218:82/live/cctv15hd.m3u8
 CCTV-15,http://38.75.136.137:98/gslb/dsdqbv/cctv15hd.m3u8?auth=test20251009
 CCTV-15,http://38.75.136.137:98/gslb/dsdqpub/cctv15hd.m3u8?auth=testpub
+CCTV-15,http://38.75.136.137:98/gslb/dsdqca/cctv15hd.m3u8?auth=test20251009
+CCTV-15,http://112.123.243.37:50085/tsfile/live/0016_1.m3u8
 风云音乐,http://38.75.136.137:98/gslb/dsdqpub/fyyy.m3u8?auth=testpub
-潮流音乐,http://play-radio-stream3.hndt.com/now/Or5au0KN/playlist.m3u8
 
 🏛经典剧场,#genre#
 笑傲江湖,http://1.94.31.214:35455/huya/26355790
