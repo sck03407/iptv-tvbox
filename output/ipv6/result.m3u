@@ -1,5 +1,5 @@
 #EXTM3U x-tvg-url="https://raw.githubusercontent.com/sck03407/iptv-tvbox/refs/heads/main/output/epg/epg.gz"
-#EXTINF:-1 tvg-id="CCTV-1" tvg-name="CCTV-1" tvg-logo="http://10.1.1.22:5180/logo/CCTV-1.png" group-title="🕘️更新时间",2026-10-25 22:20:55
+#EXTINF:-1 tvg-id="CCTV-1" tvg-name="CCTV-1" tvg-logo="http://10.1.1.182:5180/logo/CCTV-1.png" group-title="🕘️更新时间",2026-10-27 23:56:31
 http://iptv.huuc.edu.cn/hls/cctv1hd.m3u8
 #EXTINF:-1 tvg-id="CCTV-1" tvg-name="CCTV-1" tvg-logo="https://live.fanmingming.com/tv/CCTV1.png" group-title="央视",CCTV-1
 http://iptv.huuc.edu.cn/hls/cctv1hd.m3u8
@@ -180,7 +180,7 @@ https://zby.130519.xyz/PLTV/11/224/3221225775/index.m3u8
 #EXTINF:-1 tvg-id="CETV-1" tvg-name="CETV-1" tvg-logo="https://live.fanmingming.com/tv/CETV1.png" group-title="央视",CETV-1
 http://gslbmgsplive.miguvideo.com/migu/kailu/cetv1/51/20240709/index.m3u8?msisdn=e14bf4df28940fa340e765cf9e93346d&mdspid=&spid=699004&netType=0&sid=5910022150&pid=2028597139&timestamp=20261021115118&Channel_ID=0116_2600034600-99000-201600010010028&ProgramID=923287154&ParentNodeID=-99&assertID=5910022150&client_ip=39.103.182.111&SecurityKey=20261021115118&promotionId=&mvid=5900006636&mcid=500020&playurlVersion=WX-A1-9.10.1-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=45e1c233f785509ae6960466959c1cc7&ddCalcu=74c5vcea11dcca9253936f674805659069ea&sv=10004&ct=android
 #EXTINF:-1 tvg-id="CETV-1" tvg-name="CETV-1" tvg-logo="https://live.fanmingming.com/tv/CETV1.png" group-title="央视",CETV-1
-http://gslbmgsplive.miguvideo.com/migu/kailu/cetv1/50/20240709/index.m3u8?msisdn=202610250842291db4e3d4cd704f2cbd5f639fbbf8b8bf&mdspid=&spid=699004&netType=0&sid=5910022150&pid=2028597139&timestamp=20261025084229&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=923287154&ParentNodeID=-99&assertID=5910022150&client_ip=2409:8a00:6030:db21:b51d:cf2e:de01:a56c&SecurityKey=20261025084229&promotionId=&mvid=5900006636&mcid=500020&playurlVersion=WX-A1-9.10.1-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=a49311d102ce6479d1becd4069094d69&ddCalcu=9a64ed92433910019d610042dccee6b417d9
+http://gslbmgsplive.miguvideo.com/migu/kailu/cetv1/50/20240709/index.m3u8?msisdn=20261027084232ebd797b6d65d4a30876ab20422abeb51&mdspid=&spid=699004&netType=0&sid=5910022150&pid=2028597139&timestamp=20261027084232&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=923287154&ParentNodeID=-99&assertID=5910022150&client_ip=2409:8a00:6030:db21:d06e:22e9:7063:f5dc&SecurityKey=20261027084232&promotionId=&mvid=5900006636&mcid=500020&playurlVersion=ZQ-A1-9.10.1-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=27346e99bbccd9a0c208ca48fdc03a84&ddCalcu=4287ea32343060ced9f98b4baccc8d092ac0
 #EXTINF:-1 tvg-id="CETV-1" tvg-name="CETV-1" tvg-logo="https://live.fanmingming.com/tv/CETV1.png" group-title="央视",CETV-1
 http://mgsp-yx2.live.miguvideo.com:8088/migu/kailu/cetv1/51/20240709/index.m3u8?msisdn=e55e9ee71b42d2d7008a152c069625e3&mdspid=&spid=699004&netType=0&sid=5910022150&pid=2028597139&timestamp=20260215040215&Channel_ID=0116_2600034600-99000-201600010010028&ProgramID=923287154&ParentNodeID=-99&assertID=5910022150&client_ip=218.28.233.106&SecurityKey=20260215040215&promotionId=&mvid=5900006636&mcid=500020&playurlVersion=WX-A1-9.2.1-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=3ad3b1354213f218e85d9817c4727faa&sv=10004&ct=android
 #EXTINF:-1 tvg-id="CETV-1" tvg-name="CETV-1" tvg-logo="https://live.fanmingming.com/tv/CETV1.png" group-title="央视",CETV-1
@@ -190,7 +190,7 @@ http://gslbmgsplive.miguvideo.com/migu/kailu/cetv2/51/20240709/index.m3u8?msisdn
 #EXTINF:-1 tvg-id="CETV-2" tvg-name="CETV-2" tvg-logo="https://live.fanmingming.com/tv/CETV2.png" group-title="央视",CETV-2
 http://gslbmgsplive.miguvideo.com/migu/kailu/cetv2/51/20240709/index.m3u8?msisdn=e14bf4df28940fa340e765cf9e93346d&mdspid=&spid=699004&netType=0&sid=5910022152&pid=2028597139&timestamp=20261021115118&Channel_ID=0116_2600034600-99000-201600010010028&ProgramID=923287211&ParentNodeID=-99&assertID=5910022152&client_ip=39.103.182.111&SecurityKey=20261021115118&promotionId=&mvid=5900006638&mcid=500020&playurlVersion=WX-A1-9.10.1-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=4685bea7661590701b0da4b0baf17d02&ddCalcu=2406vd8a75a1bafeaab706b641a5d900b710&sv=10004&ct=android
 #EXTINF:-1 tvg-id="CETV-2" tvg-name="CETV-2" tvg-logo="https://live.fanmingming.com/tv/CETV2.png" group-title="央视",CETV-2
-http://gslbmgsplive.miguvideo.com/migu/kailu/cetv2/50/20240709/index.m3u8?msisdn=20261025084230db2b9016e9ae4e93b879273bfcd3b2aa&mdspid=&spid=699004&netType=0&sid=5910022152&pid=2028597139&timestamp=20261025084230&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=923287211&ParentNodeID=-99&assertID=5910022152&client_ip=2409:8a00:6030:db21:b51d:cf2e:de01:a56c&SecurityKey=20261025084230&promotionId=&mvid=5900006638&mcid=500020&playurlVersion=WX-A1-9.10.1-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=c14dbe3b7ce0db65606e7d9639c868a0&ddCalcu=0ca1e8426d38b0ce933b679cde70ed6b0665
+http://gslbmgsplive.miguvideo.com/migu/kailu/cetv2/50/20240709/index.m3u8?msisdn=202610270842321d873a388caf48ea8ce83f6d6ba6d895&mdspid=&spid=699004&netType=0&sid=5910022152&pid=2028597139&timestamp=20261027084232&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=923287211&ParentNodeID=-99&assertID=5910022152&client_ip=2409:8a00:6030:db21:d06e:22e9:7063:f5dc&SecurityKey=20261027084232&promotionId=&mvid=5900006638&mcid=500020&playurlVersion=ZQ-A1-9.10.1-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=bf72897f76406867d1561b8c30704d94&ddCalcu=4b9fed7242308079073fc786b410665816d7
 #EXTINF:-1 tvg-id="CETV-2" tvg-name="CETV-2" tvg-logo="https://live.fanmingming.com/tv/CETV2.png" group-title="央视",CETV-2
 http://gslbmgsplive.miguvideo.com/migu/kailu/cetv2/50/20240709/index.m3u8?msisdn=20250903090033bf55eab2bb984fe0b4ac863e60d28ac6&mdspid=&spid=699004&netType=0&sid=5910022152&pid=2028597139&timestamp=20250903090033&Channel_ID=0116_2600037000-99000-200300220100002&ProgramID=923287211&ParentNodeID=-99&assertID=5910022152&client_ip=106.13.250.83&SecurityKey=20250903090033&promotionId=&mvid=5900006638&mcid=500020&playurlVersion=WX-A1-8.8.1-RELEASE&userid=&jmhm=&videocodec=h264&bean=mgspad&tid=android&conFee=0&puData=ebfbdc6c83654112720d2b5599373223&ddCalcu=3e2bv2fa3ba7da3c969c5853b625d4012172&sv=10004&ct=android
 #EXTINF:-1 tvg-id="CETV-2" tvg-name="CETV-2" tvg-logo="https://live.fanmingming.com/tv/CETV2.png" group-title="央视",CETV-2
@@ -208,7 +208,7 @@ http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?msisdn
 #EXTINF:-1 tvg-id="CETV-4" tvg-name="CETV-4" tvg-logo="https://live.fanmingming.com/tv/CETV4.png" group-title="央视",CETV-4
 http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?msisdn=0fe2e720dade199fdb57221b9b2a5d41&mdspid=&spid=699004&netType=0&sid=5910022154&pid=2028597139&timestamp=20261021115118&Channel_ID=0116_2600034600-99000-201600010010028&ProgramID=923287339&ParentNodeID=-99&assertID=5910022154&client_ip=39.103.188.159&SecurityKey=20261021115118&promotionId=&mvid=5900006640&mcid=500020&playurlVersion=WX-A1-9.10.1-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=e1da0c48b6f8e78cb9b2d75421cf6625&ddCalcu=5e21v6da6abf0acc14284b567fd82eb798bc&sv=10004&ct=android
 #EXTINF:-1 tvg-id="CETV-4" tvg-name="CETV-4" tvg-logo="https://live.fanmingming.com/tv/CETV4.png" group-title="央视",CETV-4
-http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/50/20240709/index.m3u8?msisdn=20261025084230c611e46dd2db4ec6a770aff9524f316c&mdspid=&spid=699004&netType=0&sid=5910022154&pid=2028597139&timestamp=20261025084230&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=923287339&ParentNodeID=-99&assertID=5910022154&client_ip=2409:8a00:6030:db21:b51d:cf2e:de01:a56c&SecurityKey=20261025084230&promotionId=&mvid=5900006640&mcid=500020&playurlVersion=WX-A1-9.10.1-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=060cb9d321ee1b155203c665410f7ab2&ddCalcu=20b6ea027c3fb0091d4352616ece310b2155
+http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/50/20240709/index.m3u8?msisdn=20261027084233ae480801b07548379e837ca45dabfe36&mdspid=&spid=699004&netType=0&sid=5910022154&pid=2028597139&timestamp=20261027084233&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=923287339&ParentNodeID=-99&assertID=5910022154&client_ip=2409:8a00:6030:db21:d06e:22e9:7063:f5dc&SecurityKey=20261027084233&promotionId=&mvid=5900006640&mcid=500020&playurlVersion=ZQ-A1-9.10.1-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=1e2661632f0cc7de8493b176b4571157&ddCalcu=715ee1221637605146b3627f10bc3c974d8e
 #EXTINF:-1 tvg-id="文化精品" tvg-name="文化精品" tvg-logo="https://live.fanmingming.com/tv/文化精品.png" group-title="央视",文化精品
 https://hls-gateway.vpstv.net/streams/708832.m3u8
 #EXTINF:-1 tvg-id="央视台球" tvg-name="央视台球" tvg-logo="https://live.fanmingming.com/tv/央视台球.png" group-title="央视",央视台球
@@ -217,8 +217,6 @@ https://hls-gateway.vpstv.net/streams/708855.m3u8
 https://hls-gateway.vpstv.net/streams/708858.m3u8
 #EXTINF:-1 tvg-id="风云音乐" tvg-name="风云音乐" tvg-logo="https://live.fanmingming.com/tv/风云音乐.png" group-title="央视",风云音乐
 https://t.freetv.fun/live/cctvfeng-yun-yin-le.php
-#EXTINF:-1 tvg-id="第一剧场" tvg-name="第一剧场" tvg-logo="https://live.fanmingming.com/tv/第一剧场.png" group-title="央视",第一剧场
-https://7612-5516-affc-d88b.kylintv.tv/live/chinamovie_iphone.m3u8
 #EXTINF:-1 tvg-id="第一剧场" tvg-name="第一剧场" tvg-logo="https://live.fanmingming.com/tv/第一剧场.png" group-title="央视",第一剧场
 https://hls-gateway.vpstv.net/streams/708862.m3u8
 #EXTINF:-1 tvg-id="第一剧场" tvg-name="第一剧场" tvg-logo="https://live.fanmingming.com/tv/第一剧场.png" group-title="央视",第一剧场
@@ -934,21 +932,25 @@ https://live.chinacert.cftest5.cn/cnmg/live/626064707
 #EXTINF:-1 tvg-id="江苏公共" tvg-name="江苏公共" tvg-logo="https://live.fanmingming.com/tv/江苏公共.png" group-title="江苏",江苏公共
 https://live.chinacert.cftest5.cn/cnmg/live/626064693
 #EXTINF:-1 tvg-id="江苏城市" tvg-name="江苏城市" tvg-logo="https://live.fanmingming.com/tv/江苏城市.png" group-title="江苏",江苏城市
-http://gslbmgsplive.miguvideo.com/wd_r2/jstv/jschengshi/600/index.m3u8?msisdn=202610250842056dd9a109957d4a4dabadc4a3d7085477&mdspid=&spid=699067&netType=0&sid=5500260508&pid=2028597139&timestamp=20261025084205&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=626064714&ParentNodeID=-99&assertID=5500260508&client_ip=2409:8a00:6030:db21:b51d:cf2e:de01:a56c&SecurityKey=20261025084205&promotionId=&mvid=5100186409&mcid=500020&playurlVersion=WX-A1-9.10.1-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=e57f08a281cca00a8f0e9db7aba49ec1&ddCalcu=1ec5ee729f6400a8baa278b1dc9cea00f08a
+http://gslbmgsplive.miguvideo.com/wd_r2/jstv/jschengshi/600/index.m3u8?msisdn=202610270842077a4fece277ee4151834111c9ce2aa4f0&mdspid=&spid=699067&netType=0&sid=5500260508&pid=2028597139&timestamp=20261027084207&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=626064714&ParentNodeID=-99&assertID=5500260508&client_ip=2409:8a00:6030:db21:d06e:22e9:7063:f5dc&SecurityKey=20261027084207&promotionId=&mvid=5100186409&mcid=500020&playurlVersion=ZQ-A1-9.10.1-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=99d3f44c9a8fdecc3df124e1025d6ec0&ddCalcu=09c9eed2636df054240c19ea482f1dfedc3c
+#EXTINF:-1 tvg-id="江苏城市" tvg-name="江苏城市" tvg-logo="https://live.fanmingming.com/tv/江苏城市.png" group-title="江苏",江苏城市
+https://ysp.lml1971.ccwu.cc/js_jscs/playlist.m3u8
 #EXTINF:-1 tvg-id="江苏影视" tvg-name="江苏影视" tvg-logo="https://live.fanmingming.com/tv/江苏影视.png" group-title="江苏",江苏影视
-http://gslbmgsplive.miguvideo.com/wd_r2/jstv/jsyingshi/600/index.m3u8?msisdn=20261025084207c7ab7d5bfda24d1eaa1ce1bb8a18f38a&mdspid=&spid=699067&netType=0&sid=5500260517&pid=2028597139&timestamp=20261025084207&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=626064697&ParentNodeID=-99&assertID=5500260517&client_ip=2409:8a00:6030:db21:b51d:cf2e:de01:a56c&SecurityKey=20261025084207&promotionId=&mvid=5100186424&mcid=500020&playurlVersion=WX-A1-9.10.1-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=54c16ee7dd01d3e4669977e02c71e56a&ddCalcu=a564e5c2e161607ece270ded70719d936e64
+http://gslbmgsplive.miguvideo.com/wd_r2/jstv/jsyingshi/600/index.m3u8?msisdn=20261027084209692d6264f8174a878bb2151b9aef827f&mdspid=&spid=699067&netType=0&sid=5500260517&pid=2028597139&timestamp=20261027084209&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=626064697&ParentNodeID=-99&assertID=5500260517&client_ip=2409:8a00:6030:db21:d06e:22e9:7063:f5dc&SecurityKey=20261027084209&promotionId=&mvid=5100186424&mcid=500020&playurlVersion=ZQ-A1-9.10.1-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=dbe260a1571345d6e1eea5c0cd0bfa08&ddCalcu=8d0beae2f26b6000dac105c751a3e4e51de6
 #EXTINF:-1 tvg-id="江苏影视" tvg-name="江苏影视" tvg-logo="https://live.fanmingming.com/tv/江苏影视.png" group-title="江苏",江苏影视
 https://ysp.lml1971.ccwu.cc/js_jsys/playlist.m3u8
 #EXTINF:-1 tvg-id="江苏教育" tvg-name="江苏教育" tvg-logo="https://live.fanmingming.com/tv/江苏教育.png" group-title="江苏",江苏教育
 http://z.b.bkpcp.top/m.php?id=jsjy
 #EXTINF:-1 tvg-id="江苏教育" tvg-name="江苏教育" tvg-logo="https://live.fanmingming.com/tv/江苏教育.png" group-title="江苏",江苏教育
-http://gslbmgsplive.miguvideo.com/wd_r2/jstv/jsjiaoyu/600/index.m3u8?msisdn=20261025084206942cb249fcac4749ab51f31937c7a9e2&mdspid=&spid=699067&netType=0&sid=5500287493&pid=2028597139&timestamp=20261025084206&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=628008321&ParentNodeID=-99&assertID=5500287493&client_ip=2409:8a00:6030:db21:b51d:cf2e:de01:a56c&SecurityKey=20261025084206&promotionId=&mvid=5101012819&mcid=500020&playurlVersion=WX-A1-9.10.1-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=3c75154a77883473999efd7be1679949&ddCalcu=934ce9729587106514eab777d8f8e3949793
+http://gslbmgsplive.miguvideo.com/wd_r2/jstv/jsjiaoyu/600/index.m3u8?msisdn=202610270842097f0239d070534895afea018c9a42776e&mdspid=&spid=699067&netType=0&sid=5500287493&pid=2028597139&timestamp=20261027084209&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=628008321&ParentNodeID=-99&assertID=5500287493&client_ip=2409:8a00:6030:db21:d06e:22e9:7063:f5dc&SecurityKey=20261027084209&promotionId=&mvid=5101012819&mcid=500020&playurlVersion=ZQ-A1-9.10.1-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=7c4883b15bf470dc9af4a6213a24ebd9&ddCalcu=97dceb42e8848023ab31152b6fa447f0ad9c
+#EXTINF:-1 tvg-id="江苏教育" tvg-name="江苏教育" tvg-logo="https://live.fanmingming.com/tv/江苏教育.png" group-title="江苏",江苏教育
+https://ysp.lml1971.ccwu.cc/js_jsjy/playlist.m3u8
 #EXTINF:-1 tvg-id="沭阳综合" tvg-name="沭阳综合" tvg-logo="https://live.fanmingming.com/tv/沭阳综合.png" group-title="江苏",沭阳综合
 http://shuyang-tv-hls.cm.jstv.com/shuyang-tv/shuyangzh.m3u8
 #EXTINF:-1 tvg-id="沭阳综合" tvg-name="沭阳综合" tvg-logo="https://live.fanmingming.com/tv/沭阳综合.png" group-title="江苏",沭阳综合
-http://shuyang-tv-hls.cm.jstv.com/shuyang-tv/shuyangzh.m3u8?zjiangsd
-#EXTINF:-1 tvg-id="沭阳综合" tvg-name="沭阳综合" tvg-logo="https://live.fanmingming.com/tv/沭阳综合.png" group-title="江苏",沭阳综合
 https://shuyang-tv-hls.cm.jstv.com:443/shuyang-tv/shuyangzh.m3u8
+#EXTINF:-1 tvg-id="沭阳综合" tvg-name="沭阳综合" tvg-logo="https://live.fanmingming.com/tv/沭阳综合.png" group-title="江苏",沭阳综合
+http://shuyang-tv-hls.cm.jstv.com/shuyang-tv/shuyangzh.m3u8?zjiangsd
 #EXTINF:-1 tvg-id="涟水电视台综合" tvg-name="涟水电视台综合" tvg-logo="https://live.fanmingming.com/tv/涟水电视台综合.png" group-title="江苏",涟水电视台综合
 rtmp://lianshui-tv-hls.cm.jstv.com/lianshui-tv/lsxw
 #EXTINF:-1 tvg-id="涟水电视台综合" tvg-name="涟水电视台综合" tvg-logo="https://live.fanmingming.com/tv/涟水电视台综合.png" group-title="江苏",涟水电视台综合
@@ -990,11 +992,11 @@ https://t.freetv.fun/live/su-zhou-she-hui-jing-ji.m3u8
 #EXTINF:-1 tvg-id="连云港新闻综合" tvg-name="连云港新闻综合" tvg-logo="https://live.fanmingming.com/tv/连云港新闻综合.png" group-title="江苏",连云港新闻综合
 https://live.chinacert.cftest5.cn/cnmg/live/639731715
 #EXTINF:-1 tvg-id="连云港新闻综合" tvg-name="连云港新闻综合" tvg-logo="https://live.fanmingming.com/tv/连云港新闻综合.png" group-title="江苏",连云港新闻综合
-http://gslbmgsplive.miguvideo.com/wd_r2/jstv/lygxinwenzonghe/600/index.m3u8?msisdn=20261025084211ade8c9e4c4db4f7cb8e9ad651c06dd48&mdspid=&spid=699067&netType=0&sid=5500469369&pid=2028597139&timestamp=20261025084211&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=639731715&ParentNodeID=-99&assertID=5500469369&client_ip=2409:8a00:6030:db21:b51d:cf2e:de01:a56c&SecurityKey=20261025084211&promotionId=&mvid=5102012621&mcid=500020&playurlVersion=WX-A1-9.10.1-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=db216ada288f7c6b60f95d0f5bc6c0d0&ddCalcu=0ddbe022c19660cabd5af208d85f97fc066b
+http://gslbmgsplive.miguvideo.com/wd_r2/jstv/lygxinwenzonghe/600/index.m3u8?msisdn=202610270842136584ee475ef643b79ef3e9b45bf8832c&mdspid=&spid=699067&netType=0&sid=5500469369&pid=2028597139&timestamp=20261027084213&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=639731715&ParentNodeID=-99&assertID=5500469369&client_ip=2409:8a00:6030:db21:d06e:22e9:7063:f5dc&SecurityKey=20261027084213&promotionId=&mvid=5102012621&mcid=500020&playurlVersion=ZQ-A1-9.10.1-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=38ad588aadfe89077db52d5161a88e0b&ddCalcu=b308eea28d9850a8186a1a5ddf2e58b9d077
 #EXTINF:-1 tvg-id="镇江新闻综合" tvg-name="镇江新闻综合" tvg-logo="https://live.fanmingming.com/tv/镇江新闻综合.png" group-title="江苏",镇江新闻综合
 https://live.chinacert.cftest5.cn/cnmg/live/639731783
 #EXTINF:-1 tvg-id="镇江新闻综合" tvg-name="镇江新闻综合" tvg-logo="https://live.fanmingming.com/tv/镇江新闻综合.png" group-title="江苏",镇江新闻综合
-http://gslbmgsplive.miguvideo.com/migu/kailu/zjxwzh/50/20251127/index.m3u8?msisdn=20261025084218905652df67ab44e48e0ddccd4fcf7f02&mdspid=&spid=699067&netType=0&sid=5500469365&pid=2028597139&timestamp=20261025084218&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=639731783&ParentNodeID=-99&assertID=5500469365&client_ip=2409:8a00:6030:db21:b51d:cf2e:de01:a56c&SecurityKey=20261025084218&promotionId=&mvid=5102012619&mcid=500020&playurlVersion=WX-A1-9.10.1-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=f17aa3598bed07ddab3582d8569e04d4&ddCalcu=4fd1e4720a9ea093655988db2e8d5037bdad
+http://gslbmgsplive.miguvideo.com/migu/kailu/zjxwzh/50/20251127/index.m3u8?msisdn=20261027084221aa54aba635f0498a944267988280d9cb&mdspid=&spid=699067&netType=0&sid=5500469365&pid=2028597139&timestamp=20261027084221&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=639731783&ParentNodeID=-99&assertID=5500469365&client_ip=2409:8a00:6030:db21:d06e:22e9:7063:f5dc&SecurityKey=20261027084221&promotionId=&mvid=5102012619&mcid=500020&playurlVersion=ZQ-A1-9.10.1-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=bec7bf50fc19c0ce4abc6244554d0471&ddCalcu=1b7ee4c2079db04f55504f4c2169ccb0ac4e
 #EXTINF:-1 tvg-id="金鹰纪实" tvg-name="金鹰纪实" tvg-logo="https://live.fanmingming.com/tv/金鹰纪实.png" group-title="湖南",金鹰纪实
 http://iptv.huuc.edu.cn/hls/gedocu.m3u8
 #EXTINF:-1 tvg-id="金鹰纪实" tvg-name="金鹰纪实" tvg-logo="https://live.fanmingming.com/tv/金鹰纪实.png" group-title="湖南",金鹰纪实
@@ -1269,8 +1271,6 @@ https://jwcdnqx.hebyun.com.cn/live/xlzh/1500k/tzwj_video.m3u8
 https://jwcdnqx.hebyun.com.cn/zb/xlzh/1500k/tzwj_video.m3u8
 #EXTINF:-1 tvg-id="平泉影视" tvg-name="平泉影视" tvg-logo="https://live.fanmingming.com/tv/平泉影视.png" group-title="河北",平泉影视
 https://jwcdnqx.hebyun.com.cn/zb/pqys/1500k/tzwj_video.m3u8
-#EXTINF:-1 tvg-id="平泉影视" tvg-name="平泉影视" tvg-logo="https://live.fanmingming.com/tv/平泉影视.png" group-title="河北",平泉影视
-https://jwcdnqx.hebyun.com.cn/live/pqys/1500k/tzwj_video.m3u8
 #EXTINF:-1 tvg-id="平泉综合" tvg-name="平泉综合" tvg-logo="https://live.fanmingming.com/tv/平泉综合.png" group-title="河北",平泉综合
 https://jwcdnqx.hebyun.com.cn/live/pqzh/1500k/tzwj_video.m3u8
 #EXTINF:-1 tvg-id="清河新闻综合" tvg-name="清河新闻综合" tvg-logo="https://live.fanmingming.com/tv/清河新闻综合.png" group-title="河北",清河新闻综合
@@ -1432,8 +1432,6 @@ http://r.jdshipin.com/jUx8K
 #EXTINF:-1 tvg-id="明珠台" tvg-name="明珠台" tvg-logo="https://live.fanmingming.com/tv/明珠台.png" group-title="港",明珠台
 http://cdn9.163189.xyz/smt1.1.php?id=pearl_twn
 #EXTINF:-1 tvg-id="凤凰中文" tvg-name="凤凰中文" tvg-logo="https://live.fanmingming.com/tv/凤凰中文.png" group-title="港",凤凰中文
-https://7612-5516-affc-d88b.kylintv.tv/live/pxinhd_iphone.m3u8
-#EXTINF:-1 tvg-id="凤凰中文" tvg-name="凤凰中文" tvg-logo="https://live.fanmingming.com/tv/凤凰中文.png" group-title="港",凤凰中文
 http://r.jdshipin.com/cCCzW
 #EXTINF:-1 tvg-id="凤凰资讯" tvg-name="凤凰资讯" tvg-logo="https://live.fanmingming.com/tv/凤凰资讯.png" group-title="港",凤凰资讯
 http://r.jdshipin.com/0Rp07
@@ -1449,8 +1447,6 @@ http://r.jdshipin.com/yDoTN
 http://r.jdshipin.com/NfC0f
 #EXTINF:-1 tvg-id="凤凰香港" tvg-name="凤凰香港" tvg-logo="https://live.fanmingming.com/tv/凤凰香港.png" group-title="港",凤凰香港
 https://cdn6.163189.xyz/163189/fhhk
-#EXTINF:-1 tvg-id="凤凰卫视" tvg-name="凤凰卫视" tvg-logo="https://live.fanmingming.com/tv/凤凰卫视.png" group-title="港",凤凰卫视
-https://7612-5516-affc-d88b.kylintv.tv/live/pxinhd_iphone.m3u8
 #EXTINF:-1 tvg-id="香港卫视" tvg-name="香港卫视" tvg-logo="https://live.fanmingming.com/tv/香港卫视.png" group-title="卫视",香港卫视
 http://cctvtxyh5c.liveplay.myqcloud.com/cstv/xianggangweishi_2/index.m3u8
 #EXTINF:-1 tvg-id="香港卫视" tvg-name="香港卫视" tvg-logo="https://live.fanmingming.com/tv/香港卫视.png" group-title="卫视",香港卫视
@@ -1551,8 +1547,6 @@ https://hls-gateway.vpstv.net/streams/709488.m3u8
 http://r.jdshipin.com/sXuuD
 #EXTINF:-1 tvg-id="无线星河" tvg-name="无线星河" tvg-logo="https://live.fanmingming.com/tv/无线星河.png" group-title="电影",无线星河
 http://r.jdshipin.com/Voac4
-#EXTINF:-1 tvg-id="无线星河" tvg-name="无线星河" tvg-logo="https://live.fanmingming.com/tv/无线星河.png" group-title="电影",无线星河
-https://iptv.707626.xyz/ch/35a8b1635c056f83fcb56fe163a0b487/master.m3u8
 #EXTINF:-1 tvg-id="无线星河" tvg-name="无线星河" tvg-logo="https://live.fanmingming.com/tv/无线星河.png" group-title="电影",无线星河
 http://v2h.jdshipin.com/xinghe_1/xinghe_1.stream/chunklist_w106.m3u8
 #EXTINF:-1 tvg-id="无线星河" tvg-name="无线星河" tvg-logo="https://live.fanmingming.com/tv/无线星河.png" group-title="电影",无线星河
@@ -1684,21 +1678,13 @@ http://tv.pull.hebtv.com/jishi/shaoerkejiao.m3u8?t=2510710360&k=4ff4446adf3cce3d
 #EXTINF:-1 tvg-id="七龙珠" tvg-name="七龙珠" tvg-logo="https://live.fanmingming.com/tv/七龙珠.png" group-title="动画",七龙珠
 https://live.ottiptv.cc/huya/11601966
 #EXTINF:-1 tvg-id="七龙珠" tvg-name="七龙珠" tvg-logo="https://live.fanmingming.com/tv/七龙珠.png" group-title="动画",七龙珠
-https://live.metshop.top/huya/11601966
-#EXTINF:-1 tvg-id="七龙珠" tvg-name="七龙珠" tvg-logo="https://live.fanmingming.com/tv/七龙珠.png" group-title="动画",七龙珠
 http://cdn.jdshipin.com:8880/huya.php?id=11601966
 #EXTINF:-1 tvg-id="火影忍者" tvg-name="火影忍者" tvg-logo="https://live.fanmingming.com/tv/火影忍者.png" group-title="动画",火影忍者
 http://cdn.jdshipin.com:8880/huya.php?id=29465866
-#EXTINF:-1 tvg-id="海绵宝宝" tvg-name="海绵宝宝" tvg-logo="https://live.fanmingming.com/tv/海绵宝宝.png" group-title="动画",海绵宝宝
-https://live.metshop.top/douyu/3949681
-#EXTINF:-1 tvg-id="中华小当家" tvg-name="中华小当家" tvg-logo="https://live.fanmingming.com/tv/中华小当家.png" group-title="动画",中华小当家
-https://live.metshop.top/huya/11342413
 #EXTINF:-1 tvg-id="中华小当家" tvg-name="中华小当家" tvg-logo="https://live.fanmingming.com/tv/中华小当家.png" group-title="动画",中华小当家
 http://cdn.jdshipin.com:8880/huya.php?id=11342413
 #EXTINF:-1 tvg-id="中华小当家" tvg-name="中华小当家" tvg-logo="https://live.fanmingming.com/tv/中华小当家.png" group-title="动画",中华小当家
 https://live.ottiptv.cc/huya/11342413
-#EXTINF:-1 tvg-id="猫和老鼠" tvg-name="猫和老鼠" tvg-logo="https://live.fanmingming.com/tv/猫和老鼠.png" group-title="动画",猫和老鼠
-https://live.metshop.top/huya/11352879
 #EXTINF:-1 tvg-id="猫和老鼠" tvg-name="猫和老鼠" tvg-logo="https://live.fanmingming.com/tv/猫和老鼠.png" group-title="动画",猫和老鼠
 http://cdn.jdshipin.com:8880/huya.php?id=11352879
 #EXTINF:-1 tvg-id="猫和老鼠" tvg-name="猫和老鼠" tvg-logo="https://live.fanmingming.com/tv/猫和老鼠.png" group-title="动画",猫和老鼠
@@ -1736,17 +1722,11 @@ https://t.freetv.fun/live/cctvfeng-yun-yin-le.php
 #EXTINF:-1 tvg-id="音乐之声" tvg-name="音乐之声" tvg-logo="https://live.fanmingming.com/tv/音乐之声.png" group-title="音乐",音乐之声
 https://radio.0472.org/?id=641
 #EXTINF:-1 tvg-id="笑傲江湖" tvg-name="笑傲江湖" tvg-logo="https://live.fanmingming.com/tv/笑傲江湖.png" group-title="经典剧场",笑傲江湖
-https://live.metshop.top/huya/26355790
-#EXTINF:-1 tvg-id="笑傲江湖" tvg-name="笑傲江湖" tvg-logo="https://live.fanmingming.com/tv/笑傲江湖.png" group-title="经典剧场",笑傲江湖
-https://live.metshop.top/huya/23865142
-#EXTINF:-1 tvg-id="笑傲江湖" tvg-name="笑傲江湖" tvg-logo="https://live.fanmingming.com/tv/笑傲江湖.png" group-title="经典剧场",笑傲江湖
 http://cdn.jdshipin.com:8880/huya.php?id=26355790
 #EXTINF:-1 tvg-id="笑傲江湖" tvg-name="笑傲江湖" tvg-logo="https://live.fanmingming.com/tv/笑傲江湖.png" group-title="经典剧场",笑傲江湖
 http://cdn.jdshipin.com:8880/huya.php?id=23865142
 #EXTINF:-1 tvg-id="笑傲江湖" tvg-name="笑傲江湖" tvg-logo="https://live.fanmingming.com/tv/笑傲江湖.png" group-title="经典剧场",笑傲江湖
 https://live.ottiptv.cc/huya/26355790
-#EXTINF:-1 tvg-id="天龙八部" tvg-name="天龙八部" tvg-logo="https://live.fanmingming.com/tv/天龙八部.png" group-title="经典剧场",天龙八部
-https://live.metshop.top/huya/20985816
 #EXTINF:-1 tvg-id="天龙八部" tvg-name="天龙八部" tvg-logo="https://live.fanmingming.com/tv/天龙八部.png" group-title="经典剧场",天龙八部
 http://cdn.jdshipin.com:8880/huya.php?id=20985816
 #EXTINF:-1 tvg-id="天龙八部" tvg-name="天龙八部" tvg-logo="https://live.fanmingming.com/tv/天龙八部.png" group-title="经典剧场",天龙八部
@@ -1755,12 +1735,8 @@ https://live.ottiptv.cc/huya/20985816
 https://live.ottiptv.cc/yy/1351814644
 #EXTINF:-1 tvg-id="鹿鼎记" tvg-name="鹿鼎记" tvg-logo="https://live.fanmingming.com/tv/鹿鼎记.png" group-title="经典剧场",鹿鼎记
 https://live.ottiptv.cc/yy/28265277
-#EXTINF:-1 tvg-id="鹿鼎记" tvg-name="鹿鼎记" tvg-logo="https://live.fanmingming.com/tv/鹿鼎记.png" group-title="经典剧场",鹿鼎记
-https://live.metshop.top/yy/28265277
 #EXTINF:-1 tvg-id="仙剑奇侠传" tvg-name="仙剑奇侠传" tvg-logo="https://live.fanmingming.com/tv/仙剑奇侠传.png" group-title="经典剧场",仙剑奇侠传
 https://live.ottiptv.cc/yy/1382749903
-#EXTINF:-1 tvg-id="仙剑奇侠传" tvg-name="仙剑奇侠传" tvg-logo="https://live.fanmingming.com/tv/仙剑奇侠传.png" group-title="经典剧场",仙剑奇侠传
-https://live.metshop.top/yy/1382749903
 #EXTINF:-1 tvg-id="西游记" tvg-name="西游记" tvg-logo="https://live.fanmingming.com/tv/西游记.png" group-title="经典剧场",西游记
 https://live.ottiptv.cc/huya/26355861
 #EXTINF:-1 tvg-id="西游记" tvg-name="西游记" tvg-logo="https://live.fanmingming.com/tv/西游记.png" group-title="经典剧场",西游记
@@ -1770,17 +1746,13 @@ https://lbds.us.ci/26355861
 #EXTINF:-1 tvg-id="西游记" tvg-name="西游记" tvg-logo="https://live.fanmingming.com/tv/西游记.png" group-title="经典剧场",西游记
 http://cdn.jdshipin.com:8880/huya.php?id=30080242
 #EXTINF:-1 tvg-id="西游记" tvg-name="西游记" tvg-logo="https://live.fanmingming.com/tv/西游记.png" group-title="经典剧场",西游记
-https://live.metshop.top/huya/26355861
-#EXTINF:-1 tvg-id="三国演义" tvg-name="三国演义" tvg-logo="https://live.fanmingming.com/tv/三国演义.png" group-title="经典剧场",三国演义
-https://live.metshop.top/huya/11602081
+http://cdn.jdshipin.com:8880/huya.php?id=26355861
 #EXTINF:-1 tvg-id="三国演义" tvg-name="三国演义" tvg-logo="https://live.fanmingming.com/tv/三国演义.png" group-title="经典剧场",三国演义
 http://cdn.jdshipin.com:8880/huya.php?id=11602081
 #EXTINF:-1 tvg-id="三国演义" tvg-name="三国演义" tvg-logo="https://live.fanmingming.com/tv/三国演义.png" group-title="经典剧场",三国演义
 https://live.ottiptv.cc/huya/11602081
 #EXTINF:-1 tvg-id="三国演义" tvg-name="三国演义" tvg-logo="https://live.fanmingming.com/tv/三国演义.png" group-title="经典剧场",三国演义
 https://www.goodiptv.club/yy/32788000
-#EXTINF:-1 tvg-id="三国演义" tvg-name="三国演义" tvg-logo="https://live.fanmingming.com/tv/三国演义.png" group-title="经典剧场",三国演义
-https://live.metshop.top/yy/32788000
 #EXTINF:-1 tvg-id="水浒传" tvg-name="水浒传" tvg-logo="https://live.fanmingming.com/tv/水浒传.png" group-title="经典剧场",水浒传
 http://live.ottiptv.cc/huya/26355860
 #EXTINF:-1 tvg-id="水浒传" tvg-name="水浒传" tvg-logo="https://live.fanmingming.com/tv/水浒传.png" group-title="经典剧场",水浒传
@@ -1791,29 +1763,17 @@ http://www.clmy.cc:35455/yy/1353873252
 https://live.ottiptv.cc/yy/1354490667
 #EXTINF:-1 tvg-id="新白娘子传奇" tvg-name="新白娘子传奇" tvg-logo="https://live.fanmingming.com/tv/新白娘子传奇.png" group-title="经典剧场",新白娘子传奇
 https://www.goodiptv.club/yy/1354490667
-#EXTINF:-1 tvg-id="新白娘子传奇" tvg-name="新白娘子传奇" tvg-logo="https://live.fanmingming.com/tv/新白娘子传奇.png" group-title="经典剧场",新白娘子传奇
-https://live.metshop.top/yy/1354490667
 #EXTINF:-1 tvg-id="济公游记" tvg-name="济公游记" tvg-logo="https://live.fanmingming.com/tv/济公游记.png" group-title="经典剧场",济公游记
 https://www.goodiptv.club/yy/1355265814
-#EXTINF:-1 tvg-id="封神榜" tvg-name="封神榜" tvg-logo="https://live.fanmingming.com/tv/封神榜.png" group-title="经典剧场",封神榜
-https://live.metshop.top/huya/29465849
 #EXTINF:-1 tvg-id="封神榜" tvg-name="封神榜" tvg-logo="https://live.fanmingming.com/tv/封神榜.png" group-title="经典剧场",封神榜
 http://cdn.jdshipin.com:8880/huya.php?id=29465849
 #EXTINF:-1 tvg-id="封神榜" tvg-name="封神榜" tvg-logo="https://live.fanmingming.com/tv/封神榜.png" group-title="经典剧场",封神榜
 https://live.ottiptv.cc/huya/29465849
 #EXTINF:-1 tvg-id="封神榜" tvg-name="封神榜" tvg-logo="https://live.fanmingming.com/tv/封神榜.png" group-title="经典剧场",封神榜
 https://www.goodiptv.club/yy/1382797534
-#EXTINF:-1 tvg-id="封神榜" tvg-name="封神榜" tvg-logo="https://live.fanmingming.com/tv/封神榜.png" group-title="经典剧场",封神榜
-https://live.metshop.top/yy/1353426319
 #EXTINF:-1 tvg-id="上海滩" tvg-name="上海滩" tvg-logo="https://live.fanmingming.com/tv/上海滩.png" group-title="经典剧场",上海滩
 https://www.goodiptv.club/yy/1382745184
-#EXTINF:-1 tvg-id="上海滩" tvg-name="上海滩" tvg-logo="https://live.fanmingming.com/tv/上海滩.png" group-title="经典剧场",上海滩
-https://live.metshop.top/yy/1382745184
-#EXTINF:-1 tvg-id="射雕英雄传" tvg-name="射雕英雄传" tvg-logo="https://live.fanmingming.com/tv/射雕英雄传.png" group-title="经典剧场",射雕英雄传
-https://live.metshop.top/huya/23824164
 #EXTINF:-1 tvg-id="射雕英雄传" tvg-name="射雕英雄传" tvg-logo="https://live.fanmingming.com/tv/射雕英雄传.png" group-title="经典剧场",射雕英雄传
 http://cdn.jdshipin.com:8880/huya.php?id=23824164
 #EXTINF:-1 tvg-id="射雕英雄传" tvg-name="射雕英雄传" tvg-logo="https://live.fanmingming.com/tv/射雕英雄传.png" group-title="经典剧场",射雕英雄传
 https://live.ottiptv.cc/huya/23824164
-#EXTINF:-1 tvg-id="射雕英雄传" tvg-name="射雕英雄传" tvg-logo="https://live.fanmingming.com/tv/射雕英雄传.png" group-title="经典剧场",射雕英雄传
-https://live.metshop.top/yy/40959929
